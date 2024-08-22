@@ -6,7 +6,7 @@
 echo"Hola Mundo <br>";
 echo"<h1>Hola Mundo</h1>";
 
-//variables
+//Variables
 $nom='Jonna';
 $edad= 35;
 $statura= 1.77;

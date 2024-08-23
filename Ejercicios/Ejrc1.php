@@ -67,12 +67,12 @@ echo "Numero dos es:". $num2."<br>";
         }
     }
 
-    if($reslt<10 && $reslt == 9){//Compra el resultado si termina en 9 cuando es du una sola cifra
+    if($reslt<10 && $reslt == 9){//Compra el resultado si termina en 9 cuando es de una sola cifra
         echo "Los Digitos son: ". $reslt."<br>";
 
     }else if($reslt>10){
 
-        if($reslt % 10 == 9){//Compara si el resultado termina en 9 cuando es mayor a dos cifras
+        if($reslt % 10 == 9){//Compara si el resultado termina en 9 cuando es mayor o igual a dos cifras
 
         echo "Digitos del Numero 1: <br>";
             $digitosnum1 = str_split($num1);//Imprime los digitos del numero 1

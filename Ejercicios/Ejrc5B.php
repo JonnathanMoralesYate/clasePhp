@@ -5,8 +5,6 @@ $num1=$_POST['num1'];
 $num2=$_POST['num2'];
 $opcion=$_POST['opcion'];
 
-$comida="Yogurth";
-
 $respuesta=match ($opcion) {
     "+" => $num1 + $num2 ,
     "-" => $num1 - $num2 ,

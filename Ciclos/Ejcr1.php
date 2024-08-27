@@ -6,26 +6,30 @@
 
 $num1=$_POST['num1'];
 $num2=$_POST['num2'];
+$cont=0;
 
 
-for($i=$num1;$i<=$num2;$i++){ //Un bucle que itera desde el número de inicio hasta el número final.
+for($i=$num1+1;$i<$num2;$i++){
 
-    if($i>1){ //Los números primos son mayores que 1, así que se verifica que $i sea mayor que 1 antes de comprobar si es primo.
-        $numPrimo=true; //Asume inicialmente que $ni es primo.
+    $cont=0;
+    
+    for($j=1;$j <= $i;$j++){
+
+        if($i % $j == 0){
+
+            $cont++;
+    
+        }
+    
     }
     
-     for($j=2;$j <= sqrt($i);$j++){ //Un bucle para verificar los posibles divisores de $i. Solo es necesario verificar hasta la raíz cuadrada de $i porque un divisor más grande implicaría que el otro divisor es más pequeño que la raíz cuadrada.
-        if($i % $j == 0){ //Verifica si $i es divisible por $j. Si es divisible, no es primo
-            $numPrimo=false; //Marca $i como no primo si se encuentra un divisor
-            break; //Sale del bucle de verificación de divisores si se encuentra uno
-        }
-     }
-
-     if($numPrimo){ //Si $i sigue siendo primo, se imprime
-        echo"$i"."<br>";
-     }
+    if($cont == 2){
+    
+        echo "El numero Primo <br>";
+        echo "$i <br>";
 
     }
 
+}
 
 ?>

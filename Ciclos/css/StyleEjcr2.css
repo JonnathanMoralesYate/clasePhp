@@ -1,0 +1,47 @@
+/* .Style1{
+
+color: var(--main-colorLetra) ;
+size: var(--main-tamañoLetra) ;
+font-family: var(--main-tipoLetra) ;
+
+} */
+
+.Style2{
+
+color: green;
+size: 30px;
+font-family: Times New Roman;
+
+}
+
+.Style3{
+
+color: red;
+size: 40px;
+font-family: Verdana ;
+    
+}
+
+.Style1{
+
+    color: yellow;
+    size: 20px;
+    font-family: Courier New;
+    
+    }
+    
+    /*.Style2{
+    
+    color: green;
+    size: 30px;
+    font-family: Times New Roman;
+    
+    }
+    
+    .Style3{
+    
+    color: red;
+    size: 40px;
+    font-family: Verdana ;
+        
+    }*/

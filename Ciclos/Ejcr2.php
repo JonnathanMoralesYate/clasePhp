@@ -3,7 +3,28 @@
 // tipo de letra Courier new de color Amarillo, si es de 3 a 5 dígitos mostrarla cantidad de dígitos en tamaño de 30px, 
 // tipo de letra Times New Roman de color Verde, si tiene mas de 5 dígitos dígitos mostrarla cantidad de dígitos en tamaño de 40px, tipo de letra Verdana de color Rojo.
 
+//header("Content-type: text/css");
+//include("css/StyleEjcr2.css");
 
+$num1=$_POST['num1'];
+$cont=0;
 
+$cantDig= strlen($num1); //strlen — Obtiene la longitud de un string
+
+if($cantDig<=2){
+    echo "Cantidad de Digitos: ".'<p class="Style2">'.$cantDig.'</p>';
+}
+
+if($cantDig>2 && $cantDig<=5){
+
+    echo "<p class='Style2'>Cantidad de dígitos: $cantDig</p>";
+
+}
+
+if($cantDig>5){
+    
+    echo "<p class='Style3'>Cantidad de dígitos: $cantDig</p>";
+
+}
 
 ?>

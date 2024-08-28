@@ -7,6 +7,8 @@
 
 $num1=$_POST['num1'];
 
+$num1=strtolower($num1); //funcion convierte mayusculas a minusculas
+
 $respuesta=match ("$num1") {
     "admin" => "Acceso total" ,
     "editor" => "Acceso limitado a edición de contenido" ,

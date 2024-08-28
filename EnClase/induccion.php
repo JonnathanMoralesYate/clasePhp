@@ -1,9 +1,9 @@
 <?php
-//ver la version que esta trabajando
+//ver la version que esta trabajando en php
 //phpinfo();
 
 
-echo"Hola Mundo <br>";
+echo"Hola Mundo<br>";
 echo"<h1>Hola Mundo</h1>";
 
 //Variables

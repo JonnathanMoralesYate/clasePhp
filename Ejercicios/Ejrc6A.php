@@ -8,6 +8,8 @@
 
 $num1=$_POST['num1'];
 
+$num1=strtoupper($num1); //funcion convierte minusculas a mayusculas
+
 switch($num1){
 
     case "ADMIN" :

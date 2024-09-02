@@ -67,7 +67,7 @@ echo "Numero dos es:". $num2."<br>";
         }
     }
 
-    if($reslt<10 && $reslt == 9){//Compra el resultado si termina en 9 cuando es de una sola cifra
+    if($reslt<10 && $reslt == 9){//Compara el resultado si termina en 9 cuando es de una sola cifra
         echo "Los Digitos son: ". $reslt."<br>";
 
     }else if($reslt>10){

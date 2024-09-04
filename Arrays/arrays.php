@@ -22,10 +22,4 @@ foreach($arreglo1 as $indice => $ValorIndice){ //
 
     }
 
-
-
-
-
-
-
 ?>

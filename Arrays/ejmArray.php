@@ -38,7 +38,6 @@
         echo'<input type="submit" value="Enviar">';
         echo '</form>'; 
 
-
     }
 
     //mostrar datos
@@ -54,18 +53,10 @@
         };
 
         echo '</ul>';
-       
-
 
     }
 
-
-
     ?>
 
-
-
-
-    
 </body>
 </html>

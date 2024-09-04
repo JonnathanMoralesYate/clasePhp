@@ -1,0 +1,25 @@
+{
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "robertz.code-snapshot",
+        "adpyke.codesnap",
+        "pranaygp.vscode-css-peek",
+        "vscjava.vscode-java-debug",
+        "usernamehw.errorlens",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-gradle",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "redhat.java",
+        "ritwickdey.liveserver",
+        "pkief.material-icon-theme",
+        "vscjava.vscode-maven",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-java-test",
+        "zhuangtongfa.material-theme",
+        "rangav.vscode-thunder-client"
+    ]
+}

@@ -12,6 +12,7 @@
 // 4.	Realizar un ciclo que me muestre 4 líneas donde cada una tenga 1 color distinto.
 
     // Ciclo para generar las líneas con diferentes colores
+    
     for ($i = 1; $i < 13; $i++) {
         echo '<h1 class="style'.$i.'">'.'Color: '. $i. '</h1>';
     }

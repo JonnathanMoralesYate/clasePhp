@@ -29,8 +29,6 @@
 // con mayor cantidad de dígitos pares.
 
 
-
-
 if(isset($_POST['num'])){
 
     $valorarray=$_POST['num'];
@@ -38,10 +36,13 @@ if(isset($_POST['num'])){
 
     $cadena = array_map('intval', explode(',',$valorarray)); // intval — Obtiene el valor entero de una variable, explode — Divide un string en varios string, La función array_map() envía cada valor de un array a una función hecha por el usuario, y devuelve un array con nuevos valores, dados por la función hecha por el usuario.
 
+    $acum1=0;
+
+    print_r($cadena)."<br>";
 
     foreach($cadena as $i){     // itera o muestra cada numero del array
 
-        echo"$i <br>";
+        echo"<br>$i <br>";
 
         $cont=0;
 
@@ -55,8 +56,6 @@ if(isset($_POST['num'])){
 
         }
 
-        $acumulador=0;
-
         if($cont == 2){             //selecciona o muestra el numero primo del array
 
             //echo "primo"."$i <br>";
@@ -65,13 +64,13 @@ if(isset($_POST['num'])){
 
             $cont1=0;
 
-            $digparmay=0;
+           
 
             foreach($dig as $k){    // itera el array del numero (digitos)
 
                 if($k % 2 == 0){    // compara cada digito si es par
 
-                   // echo "digpar"."$k <br>";
+                   //echo "digpar"."$k <br>";
 
                     $cont1++;
 
@@ -79,65 +78,27 @@ if(isset($_POST['num'])){
 
                 }
 
-                //echo"contadoruno"."$cont1<br>";
-
-                if($cont1 >= 2){
-
-                    $digparmay= $cont1;
-
-                    //echo"aaaahdhdhdh"."$digparmay<br>";
-
-                    $acumulador=$i;
-
-                    //echo"hyhyhhy"."$acumulador<br>";
-
-                    for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
-
-                        if($acumulador === $cadena[$b]){
-
-                            echo "El numero esta en el indice: "."$b <br>";
-
-                            break;
-
-                        }
-
-                    }
-
-                }
-
-                if($cont1 == 1){
-
-                    $digparmay= $cont1;
-
-                    //echo"aaaahdhdhdh"."$digparmay<br>";
-
-                    $acumulador=$i;
-
-                    //echo"hyhyhhy"."$acumulador<br>";
-
-                    for($b=0;$b < count($cadena); $b++){        //count — Cuenta todos los elementos de un array o algo de un objeto
-
-                        if($acumulador === $cadena[$b]){
-
-                            echo "El numero esta en el indice: "."$b <br>";
-
-                            break;
-
-                        }
-
-                    }
-
-                }
+        }
 
         }
 
-        
+    if($cont1 >= $acum1){
 
-    }
+        $acum1=$cont1;
 
-    //echo "numeroquetienedigitosparaes"."$acumulador <br>";
+        for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
 
-    
+            if($i == $cadena[$b]){
+
+            echo "El numero esta en el indice: "."$b <br>";
+
+            break;
+
+        }
+
+        }
+
+    }    
 
 }
 

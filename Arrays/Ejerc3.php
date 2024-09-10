@@ -36,15 +36,19 @@ if(isset($_POST['num'])){
 
     $cont=0;
 
+    print_r($cadena)."<br>";
+
     foreach($cadena as $i){     // itera o muestra cada numero del array
 
-        echo"$i <br>";
+        echo"<br>";
+
+        echo"<br>$i<br>";
 
         $dig=str_split($i);     // combierte o separa en digitos el numero del array , str_split convierte el numero en un array  
 
         foreach($dig as $k){
 
-            echo"digito"."$k <br>";
+            //echo"digito"."$k <br>";
 
             if($k == 2){
 
@@ -56,7 +60,7 @@ if(isset($_POST['num'])){
 
     } 
 
-    echo"El numero de veces que se repite el digito dos en el vector: ".$cont."<br>";
+    echo"<br>El numero de veces que se repite el digito dos en el vector: ".$cont."<br>";
 
 }
 

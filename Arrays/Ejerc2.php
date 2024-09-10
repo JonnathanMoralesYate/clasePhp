@@ -30,13 +30,17 @@ if(isset($_POST['num'])){
 
     $valorarray=$_POST['num'];
 
+    $acum2=0;
 
     $cadena = array_map('intval', explode(',',$valorarray)); // intval — Obtiene el valor entero de una variable, explode — Divide un string en varios string, La función array_map() envía cada valor de un array a una función hecha por el usuario, y devuelve un array con nuevos valores, dados por la función hecha por el usuario.
 
+    print_r($cadena)."<br>";
 
     foreach($cadena as $i){     // itera o muestra cada numero del array
 
-        echo"$i <br>";
+        echo"<br>";
+
+        echo"<br>$i<br>";
 
         $cont=0;
 
@@ -60,6 +64,8 @@ if(isset($_POST['num'])){
 
                 $cont1=0;
 
+                $acum1=0;
+
                 for($a=1;$a <= $k;$a++){    // itera cada uno de los numeros del array para verificar si es primo
 
                     if($k % $a == 0){
@@ -70,83 +76,69 @@ if(isset($_POST['num'])){
 
                 }
 
-                $acumulador=0;
-
                 if($cont1 == 2){             //selecciona o muestra el digito primo del array
 
-                    echo "digitoprimo"."$k <br>";
+                    //echo "digitoprimo"."$k <br>";
 
                     $cont2++;
 
-                    $acumulador=$i;
-
                 }
 
             }
 
-        }
+            //echo"acum2: $acum2<br>";
 
-        if($cont2 === 3){
+            //echo"acum1: $acum1<br>";
 
-            for($b=0;$b < count($cadena); $b++){        //count — Cuenta todos los elementos de un array o algo de un objeto
-    
-                if($acumulador === $cadena[$b]){
-    
-                    echo "El: "."$acumulador <br>";
-    
+            //echo"cont2; $cont2 <br>";
+
+            if($cont2 > $acum1){
+
+                $acum1=$cont2;
+
+                //$acum2=$acum1;
+
+                //echo"acum1despues: $acum1<br>";
+
+                //echo"acum2despues: $acum2<br>";
+
+                //echo"cont2despues; $cont2 <br>";
+
+                //echo"$i<br>";
+
+                    for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
+
+                    if($i == $cadena[$b]){
+
                     echo "El numero esta en el indice: "."$b <br>";
-    
+
                     break;
-    
+
                 }
-    
-            }
-    
-        }
-    
-        if($cont2 === 2){
-    
-            for($b=0;$b < count($cadena); $b++){        //count — Cuenta todos los elementos de un array o algo de un objeto
-    
-                if($acumulador === $cadena[$b]){
-    
-                    echo "El: "."$acumulador <br>";
-    
-                    echo "El numero esta en el indice: "."$b <br>";
-    
-                    break;
-    
+
                 }
-    
-            }
-    
-        }
-    
-        if($cont2 === 1){
-    
-            for($b=0;$b < count($cadena); $b++){        //count — Cuenta todos los elementos de un array o algo de un objeto
-    
-                if($acumulador === $cadena[$b]){
-    
-                    echo "El numero  en el indice: "."$b <br>";
-    
-                    break;
-    
-                }
-    
-            }
-    
+
+            }  
+
+            // for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
+
+            //     if($i == $cadena[$b]){
+
+            //     echo "El numero esta en el indice: "."$b <br>";
+
+            //     break;
+
+            // }
+
+            // }
+
         }
 
     }  
 
-    
-
-
 }
 
 ?>
-
 
 </body>
 </html>

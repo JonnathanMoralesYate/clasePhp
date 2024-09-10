@@ -38,19 +38,37 @@ if(isset($_POST['num'])){
 
     $cont=0;
 
+    print_r($cadena)."<br>";
+
     foreach($cadena as $k){     // itera o muestra cada numero del array
 
-        echo"$k <br>";
+        echo"<br>";
+
+        echo"<br>$k<br>";
+
+        echo"<br>";
 
         $dig=str_split($k);
 
-        for($i=$dig[0]+1; $i <= $dig[1]-1; $i++ ){
+        if($dig[1] > $dig[0]){
+
+            for($i=$dig[0]+1; $i <= $dig[1]-1; $i++ ){
 
             echo"".$i."<br>";
 
+            }
+
+        }else{
+
+        for($i=$dig[1]+1; $i <= $dig[0]-1; $i++ ){
+
+            echo"".$i."<br>";
+
+            }
+
         }
 
-    } 
+    }
 
 }
 

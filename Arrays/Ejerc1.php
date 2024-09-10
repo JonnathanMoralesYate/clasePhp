@@ -42,7 +42,9 @@ if(isset($_POST['num'])){
 
     foreach($cadena as $i){     // itera o muestra cada numero del array
 
-        echo"<br>$i <br>";
+        echo"<br>";
+
+        echo"<br>$i<br>";
 
         $cont=0;
 
@@ -64,13 +66,11 @@ if(isset($_POST['num'])){
 
             $cont1=0;
 
-           
-
             foreach($dig as $k){    // itera el array del numero (digitos)
 
                 if($k % 2 == 0){    // compara cada digito si es par
 
-                   //echo "digpar"."$k <br>";
+                //echo "digpar"."$k <br>";
 
                     $cont1++;
 
@@ -78,27 +78,29 @@ if(isset($_POST['num'])){
 
                 }
 
-        }
+                //echo "cont1: "."$cont1 <br>";
+
+                if($cont1 >= $acum1){
+
+                    $acum1=$cont1;
+            
+                     for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
+            
+                        if($i == $cadena[$b]){
+            
+                        echo "El numero esta en el indice: "."$b <br>";
+            
+                        break;
+            
+                }
+            
+                }
+            
+                }    
 
         }
 
-    if($cont1 >= $acum1){
-
-        $acum1=$cont1;
-
-        for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
-
-            if($i == $cadena[$b]){
-
-            echo "El numero esta en el indice: "."$b <br>";
-
-            break;
-
         }
-
-        }
-
-    }    
 
 }
 

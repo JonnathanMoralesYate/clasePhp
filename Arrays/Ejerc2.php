@@ -36,19 +36,19 @@ if(isset($_POST['num'])){
 
     print_r($cadena)."<br>";
 
-    foreach($cadena as $i){     // itera o muestra cada numero del array
+    foreach($cadena as $key=>$i){     // itera o muestra cada numero del array
 
         echo"<br>";
 
-        echo"<br>$i<br>";
+        echo"<br>$key<br>";
 
         $cont=0;
 
-        for($j=1;$j <= $i;$j++){    // itera cada uno de los numeros del array para verificar si es primo
+        for($j=1;$j <= $key;$j++){    // itera cada uno de los numeros del array para verificar si es primo 277 - 337 - 23
 
             if($i % $j == 0){
 
-                $cont++;
+                $cont++;//2
 
             }
 
@@ -56,21 +56,21 @@ if(isset($_POST['num'])){
 
         if($cont == 2){             //selecciona o muestra el numero primo del array
 
-            $dig=str_split($i);     // combierte o separa en digitos el numero primo, str_split convierte el numero en un array  
+            $dig=str_split($key);     // combierte o separa en digitos el numero primo, str_split convierte el numero en un array  
 
             $cont2=0;
 
-            foreach($dig as $k){
+            foreach($dig as $k){ //377
 
-                $cont1=0;
+                $cont1=0; //si el digito es primo 2
 
-                $acum1=0;
+                $acum1=0; //
 
-                for($a=1;$a <= $k;$a++){    // itera cada uno de los numeros del array para verificar si es primo
+                for($a=1;$a <= $k;$a++){    // itera cada uno de los numeros del array para verificar si es primo 2 - 3
 
                     if($k % $a == 0){
 
-                        $cont1++;
+                        $cont1++;//2
 
                     }
 
@@ -78,65 +78,29 @@ if(isset($_POST['num'])){
 
                 if($cont1 == 2){             //selecciona o muestra el digito primo del array
 
-                    //echo "digitoprimo"."$k <br>";
-
-                    $cont2++;
+                    $cont2++; //1+1
 
                 }
 
             }
 
-            //echo"acum2: $acum2<br>";
+            if($cont2 >= $acum1){
 
-            //echo"acum1: $acum1<br>";
-
-            //echo"cont2; $cont2 <br>";
-
-            if($cont2 > $acum1){
-
-                $acum1=$cont2;
-
-                //$acum2=$acum1;
-
-                //echo"acum1despues: $acum1<br>";
-
-                //echo"acum2despues: $acum2<br>";
-
-                //echo"cont2despues; $cont2 <br>";
-
-                //echo"$i<br>";
-
-                    for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
-
-                    if($i == $cadena[$b]){
-
-                    echo "El numero esta en el indice: "."$b <br>";
-
-                    break;
-
-                }
+                $acum1=$cont2;//cant digitos primos
+                $posi=$key;//posic 1
+                $valor=$i;//numero actual
 
                 }
 
             }  
 
-            // for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
-
-            //     if($i == $cadena[$b]){
-
-            //     echo "El numero esta en el indice: "."$b <br>";
-
-            //     break;
-
-            // }
-
-            // }
-
         }
 
-    }  
+    } 
+    
+    echo "La cant de digitos primos es: ".$acum1."<br>";
+    echo "La posicion es: ".$acum1."<br>";
 
-}
 
 ?>
 

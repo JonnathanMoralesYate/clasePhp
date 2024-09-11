@@ -30,47 +30,43 @@ if(isset($_POST['num'])){
 
     $valorarray=$_POST['num'];
 
-    $acum2=0;
+    $acum1=0;
 
     $cadena = array_map('intval', explode(',',$valorarray)); // intval — Obtiene el valor entero de una variable, explode — Divide un string en varios string, La función array_map() envía cada valor de un array a una función hecha por el usuario, y devuelve un array con nuevos valores, dados por la función hecha por el usuario.
 
     print_r($cadena)."<br>";
 
-    foreach($cadena as $key=>$i){     // itera o muestra cada numero del array
+    echo"<br>";
 
-        echo"<br>";
-
-        echo"<br>$key<br>";
+    foreach($cadena as $key => $i){     // itera o muestra cada numero del array
 
         $cont=0;
 
-        for($j=1;$j <= $key;$j++){    // itera cada uno de los numeros del array para verificar si es primo 277 - 337 - 23
+        for($j=1;$j <= $i;$j++){        // itera cada uno de los numeros del array para verificar si es primo 
 
             if($i % $j == 0){
 
-                $cont++;//2
+                $cont++;                
 
             }
 
         }
 
-        if($cont == 2){             //selecciona o muestra el numero primo del array
+        if($cont == 2){                 //selecciona o muestra el numero primo del array
 
-            $dig=str_split($key);     // combierte o separa en digitos el numero primo, str_split convierte el numero en un array  
+            $dig=str_split($i);         // combierte o separa en digitos el numero primo, str_split convierte el numero en un array  
 
             $cont2=0;
 
-            foreach($dig as $k){ //377
+            foreach($dig as $k){            
 
-                $cont1=0; //si el digito es primo 2
-
-                $acum1=0; //
+                $cont1=0;                   //si el digito es primo 2
 
                 for($a=1;$a <= $k;$a++){    // itera cada uno de los numeros del array para verificar si es primo 2 - 3
 
                     if($k % $a == 0){
 
-                        $cont1++;//2
+                        $cont1++;           
 
                     }
 
@@ -78,17 +74,19 @@ if(isset($_POST['num'])){
 
                 if($cont1 == 2){             //selecciona o muestra el digito primo del array
 
-                    $cont2++; //1+1
+                    $cont2++;                
 
                 }
 
             }
 
-            if($cont2 >= $acum1){
+            if($cont2 >= $acum1){           //acumulador para imprimir el ultimo posicion del mayor numero que tiene digitos primos
 
-                $acum1=$cont2;//cant digitos primos
-                $posi=$key;//posic 1
-                $valor=$i;//numero actual
+                $acum1=$cont2;              //cant digitos primos
+
+                $posi=$key;                 //posicion 1
+
+                $valor=$i;                  //numero actual
 
                 }
 
@@ -96,11 +94,11 @@ if(isset($_POST['num'])){
 
         }
 
-    } 
-    
-    echo "La cant de digitos primos es: ".$acum1."<br>";
-    echo "La posicion es: ".$acum1."<br>";
+        echo "<br>Mayor Cantidad de digitos primos encontrados: ".$acum1."<br>";
 
+        echo "<br>Posicion donde se encuentra el numero primo con mayor numero de digitos primos es: ".$posi."<br>";
+
+    } 
 
 ?>
 

@@ -25,7 +25,7 @@
 <?php
 
     session_start();
-     if (!isset($_SESSION['numeros'])) {
+    if (!isset($_SESSION['numeros'])) {
         $_SESSION['numeros'] = array();
     }
     // Si se presionó el botón "Agregar"
@@ -39,7 +39,7 @@
         }else{
             echo "Agrega un número al array.";
         }
-       
+
     }
     
     if(isset($_POST['borrar'])){

@@ -33,18 +33,15 @@ if(isset($_POST['num'])){
 
     $valorarray=$_POST['num'];
 
+    $acum1=0;
 
     $cadena = array_map('intval', explode(',',$valorarray)); // intval — Obtiene el valor entero de una variable, explode — Divide un string en varios string, La función array_map() envía cada valor de un array a una función hecha por el usuario, y devuelve un array con nuevos valores, dados por la función hecha por el usuario.
 
-    $acum1=0;
-
     print_r($cadena)."<br>";
 
-    foreach($cadena as $i){     // itera o muestra cada numero del array
+    echo"<br>";
 
-        echo"<br>";
-
-        echo"<br>$i<br>";
+    foreach($cadena as $key => $i){     // itera o muestra cada numero del array
 
         $cont=0;
 
@@ -60,8 +57,6 @@ if(isset($_POST['num'])){
 
         if($cont == 2){             //selecciona o muestra el numero primo del array
 
-            //echo "primo"."$i <br>";
-
             $dig=str_split($i);     // combierte o separa en digitos ese numero primo, str_split convierte el numero en un array  
 
             $cont1=0;
@@ -70,37 +65,29 @@ if(isset($_POST['num'])){
 
                 if($k % 2 == 0){    // compara cada digito si es par
 
-                //echo "digpar"."$k <br>";
-
                     $cont1++;
 
                 }
 
                 }
 
-                //echo "cont1: "."$cont1 <br>";
-
                 if($cont1 >= $acum1){
 
-                    $acum1=$cont1;
-            
-                     for($b=0;$b < count($cadena); $b++){    // count — Cuenta todos los elementos de un array o algo de un objeto
-            
-                        if($i == $cadena[$b]){
-            
-                        echo "El numero esta en el indice: "."$b <br>";
-            
-                        break;
-            
+                    $acum1=$cont1;              //cantidad digitos pares
+
+                    $posi=$key;                 //posicion 
+
+                    $valor=$i;                  //numero actual si lo piden o l  o quiere mostrar
+
                 }
-            
-                }
-            
-                }    
 
         }
 
-    }
+    }  
+
+        echo "<br>Mayor Cantidad de digitos pares encontrados: ".$acum1."<br>";
+
+        echo "<br>Posicion donde se encuentra el numero primo con mayor numero de digitos pares es: ".$posi."<br>";
 
 }
 

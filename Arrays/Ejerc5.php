@@ -50,28 +50,27 @@ if(isset($_POST['num'])){
 
         $dig=str_split($k);
 
-        if($dig[1] > $dig[0]){
+        foreach($dig as $i){
 
-            for($i=$dig[0]+1; $i <= $dig[1]-1; $i++ ){
+            if($i == 1){
 
-            echo"".$i."<br>";
+                echo"$i :No tiene numeros comprendidos";
+
+            }
+
+            for($j = 1; $j < $i; $j++){
+
+                echo"$j<br>";
 
             }
 
-        }else{
-
-        for($i=$dig[1]+1; $i <= $dig[0]-1; $i++ ){
-
-            echo"".$i."<br>";
-
-            }
+            echo"<br>";
 
         }
 
     }
 
-}
-
+}       
 
 ?>
 

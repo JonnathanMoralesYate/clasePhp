@@ -42,7 +42,6 @@ if(isset($_POST['num1']) && isset($_POST['num2'])){
 
     Echo"<br>$num2<br>";
 
-
     ejercquinto($num1, $num2);
 
     if(ejercquinto($num1, $num2) == true){
@@ -51,8 +50,6 @@ if(isset($_POST['num1']) && isset($_POST['num2'])){
     }else{
         echo"<br>0";
     }
-
-    
 
 }
 

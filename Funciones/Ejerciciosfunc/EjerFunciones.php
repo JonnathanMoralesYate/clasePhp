@@ -96,11 +96,7 @@ function ejercuatro($cant){
 
 //función que reciba como parámetros dos números enteros y retorne 1 si el primer número es múltiplo del segundo y 0 si no.
 
-function ejercquinto($num1, $num2){ // 15   60
-
-    //Echo"$num1<br>";
-
-    //Echo"$num2<br>";
+function ejercquinto($num1, $num2){ 
 
     if($num2 % $num1 == 0){
 

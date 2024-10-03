@@ -7,15 +7,15 @@
 </head>
 <body>
 
-<form>
+<form action="" method="POST">
 
     <label for="num1" >Digite el primer numero</label>
-    <Input type="number" name="num1" id="num1 required">
+    <Input type="text" name="num1" id="num1 required">
     <br>
     <br>
 
     <label for="num2" >Digite el segundo numero</label>
-    <Input type="number" name="num2" id="num2 required">
+    <Input type="text" name="num2" id="num2 required">
     <br>
     <br>
 
@@ -24,7 +24,7 @@
             <option value="-">Resta</option>
             <option value="*">Multiplicacion</option>
             <option value="/">Division</option>
-    </select>
+    </select> 
     <br>
     <br>
 
@@ -35,7 +35,44 @@
 
 <?php 
 
+require_once 'calculadora.php';
 
+if(isset($_POST['num1']) && isset($_POST['num2'])){
+
+    $num1=$_POST['num1'];
+
+    $num2=$_POST['num2'];
+
+    $opcion=$_POST['opcion'];
+
+    $objeto = new calculadora($num1, $num2);
+
+    if($opcion == "+"){
+
+        echo $objeto->suma().'<br>';
+
+    }
+
+    if($opcion == "-"){
+
+        echo $objeto->resta().'<br>';
+
+    }
+
+    if($opcion == "/"){
+
+        echo $objeto->division().'<br>';
+
+    }
+
+    if($opcion == "*"){
+
+        echo $objeto->multiplicacion().'<br>';
+
+    }
+
+
+}
 
 
 

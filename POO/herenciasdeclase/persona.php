@@ -6,11 +6,11 @@ class persona{
     private $numDoc;
     private $estatura;
 
-    public function __construct(){
+    public function __construct($nom, $numDoc, $estatura){
 
-        $this->nom = $nom;
-        $this->numDoc = $numDoc;
-        $this->estatura = $estatura;
+        $this->nom=$nom;
+        $this->numDoc=$numDoc;
+        $this->estatura=$estatura;
 
     }
 

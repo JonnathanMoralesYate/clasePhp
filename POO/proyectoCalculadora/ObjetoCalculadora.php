@@ -7,6 +7,10 @@
 </head>
 <body>
 
+<h1>Calculadora en php POO</h1>
+<br>
+<br>
+
 <form action="" method="POST">
 
     <label for="num1" >Digite el primer numero</label>
@@ -31,6 +35,8 @@
     <Input type="submit" value="Enviar">
 
 </form>
+<br>
+<br>
 
 
 <?php 

@@ -13,13 +13,13 @@ class empleadoPorHora extends empleado{
         $this-> horasTrab = $horasTrab;
     }
 
-    function getDiasTrab(){
+    function getHorasTrab(){
 
         return $this->horasTrab;
 
     }
 
-    function setDiasTrab($horasTrab){
+    function setHorasTrab($horasTrab){
 
         return $this->horasTrab = $horasTrab;
 
@@ -27,13 +27,11 @@ class empleadoPorHora extends empleado{
 
     function salarioH(){
 
-        $valorHora= $this->salario / (184);
+        $valorHora = $this->getSalario() / 184;
 
-        $result = $this->horasTrab * $valorHora;
+       $result = intval( $this->horasTrab) * $valorHora;
 
-        //return $result
-
-        Echo "El salario es: ".$result."<br>";
+        Echo "El Empleado ".$this->getNomEmplea(). " tiene un salario de ".$result." COP"." por haber trabajado un total de ".$this->getHorasTrab()." horas";
 
     }
 

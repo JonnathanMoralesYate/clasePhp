@@ -3,7 +3,7 @@
 include_once 'empleadoe.php';
 
 class empleadoFijo extends empleado{
- 
+
     private $diasTrab;
 
     public function __construct($nomEmplea, $salario, $diasTrab){
@@ -27,13 +27,11 @@ class empleadoFijo extends empleado{
 
     function salarioF(){
 
-        $valorDia= $this->salario / (30);
+        $valorDia= $this->getSalario() / 30;
 
         $result = $this->diasTrab * $valorDia;
 
-        //return $result
-
-        Echo "El salario es: ".$result."<br>";
+        Echo "El Empleado ".$this->getNomEmplea(). " tiene un salario de ".$result." COP"."  por haber trabajado un total de ".$this->getDiasTrab()." dias";
 
     }
 

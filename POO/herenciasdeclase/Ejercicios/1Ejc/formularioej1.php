@@ -58,7 +58,7 @@ require_once 'empleadoe.php';
 require_once 'empleadoFijo.php';
 require_once 'empleadoPorHora.php';
 
-if(isset($_POST['nom']) && isset($_POST['salario']) || isset($_POST['diasTrab']) || isset($_POST['horasTrab'])){
+if(isset($_POST['nom']) && isset($_POST['salario'])){
 
 $nom=$_POST['nom'];
 $salario=$_POST['salario'];
@@ -77,7 +77,7 @@ if($opcion == "F"){
 
 if($opcion == "H"){
 
-        $objeto = new empleadoPorHora($nom, $salario, $tiemTrab);
+    $objeto = new empleadoPorHora($nom, $salario, $tiemTrab);
 
     $objeto->salarioH();
 

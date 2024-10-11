@@ -27,7 +27,8 @@ class empleadoFijo extends empleado{
 
     function salarioF(){
 
-        $valorDia= $this->getSalario() / 30;
+        $valorDia= $this->getSalario() /
+         30;
 
         $result = $this->diasTrab * $valorDia;
 

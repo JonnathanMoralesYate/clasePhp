@@ -59,6 +59,7 @@ require_once 'empleadoFijo.php';
 require_once 'empleadoPorHora.php';
 
 if(isset($_POST['nom']) && isset($_POST['salario'])){
+if(isset($_POST['nom']) && isset($_POST['salario']) && isset($_POST['tiemTrab'])){
 
 $nom=$_POST['nom'];
 $salario=$_POST['salario'];

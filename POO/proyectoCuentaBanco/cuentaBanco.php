@@ -2,51 +2,63 @@
 
 class banco{
 
-    private $numCuenta;
-    private $clave;
-    private $monto;
+    private $cuenta;
 
-    public function __construc($numCuenta, $clave,$monto){
+    public function __construc($saldo = 100000){
 
-        $this->numCuenta=$numCuenta;
-        $this->clave=$clave;
-        $this->monto=$monto;
+        $this->cuenta=$saldo;
 
-    }
-
-    public function setNumCuenta(){
-        return $this->NumCuenta;
-    }
-
-    public function getNumCuenta($numCuenta){
-        $this->numCuenta=$numCuenta;
-    }
-
-    public function setClave(){
-        return $this->clave;
-    }
-
-    public function getClave($clave){
-        $this->clave=$clave;
     }
 
     public function setMonto(){
-        return $this->monto;
-    }
 
-    public function getMonto($monto){
-        $this->monto=$monto;
-    }
-
-    public function Depositar(){
+        return $this->cuenta;
 
     }
 
-    public function Retirar(){
+    public function getMonto($cuenta){
+
+        $this->cuenta=$cuenta;
 
     }
 
-    public function
+    public function Depositar($monto){
+
+        if($monto > 0){
+
+            $this->cuenta += $monto;
+
+            echo "Operacion Exitosa"."<br>"."Deposito: ".$monto."<br>".$this->cuenta;
+
+        }else{
+
+            echo "No se puedo realizar esta operacion";
+
+        }
+
+    }
+
+    public function Retirar($monto){
+
+        if($monto > 0 && $monto <= 100){
+
+            $this->cuenta -= $monto;
+
+            echo "Operacion Exitosa"."<br>"."Retiro:".$monto;
+
+        }else{
+
+            echo "Saldo Insuficiente";
+
+        }
+
+    }
+
+    public function ConsultaSaldo(){
+
+        return $this->cuenta;
+
+    }
 
 }
 

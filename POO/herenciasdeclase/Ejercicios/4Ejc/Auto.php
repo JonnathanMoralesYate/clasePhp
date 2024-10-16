@@ -31,14 +31,14 @@ class auto extends vehiculo{
         return $this->numeroPuestos = $numeroPuestos;
     }
     
-    public mostrarInf(){
-        return(
-            "<h2>Informacion General</h2>".
+    public function mostrarInf() {
+        return (
+            "<h2>Informacion Auto</h2>".
             "Modelo". $this->setModelo()."<br>".
             "Marca". $this->setMarca()."<br>".
             "Tipo de combustible". $this->setTipoCombustible()."<br>".
-            "Numero de Lantas $this->numeroLlantas <br>".
-        )
+            "Numero de Lantas $this->numeroLlantas <br>"
+        );
 }
 
 }

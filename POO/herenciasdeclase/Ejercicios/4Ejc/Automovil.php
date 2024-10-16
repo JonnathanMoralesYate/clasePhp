@@ -5,7 +5,7 @@ class vehiculo{
     private $modelo;
     private $marca;
     private $tipoCombustible;
-}
+
 
 public function __construc($modelo, $marca, $tipoCombustible){
     $this->modelo = $modelo;
@@ -39,12 +39,14 @@ public function getTipoCombustible($tipoCombustible){
 }
 
 
-public mostrarInf(){
+public function mostrarInf(){
     return(
         "<h2>Informacion General</h2>".
         "Modelo $this->modelo <br>".
         "Marca $this->marca <br>".
-        "Tipo de combustible $this->tipoCombustible <br>";
-    )
+        "Tipo de combustible $this->tipoCombustible <br>"
+    );
+    }
+
 }
 ?>

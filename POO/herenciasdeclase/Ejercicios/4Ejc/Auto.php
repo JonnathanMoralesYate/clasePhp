@@ -4,32 +4,26 @@ require_once 'Automovil.php';
 
 class auto extends vehiculo{
 
-    private $numeroLlantas;
-    private $numeroPuestos;
+    private $tipoTransmision;
+    
 
-    public function __construc($modelo, $marca, $tipoCombustible, $numeroLlantas, $numeroPuestos){
+    public function __construc($modelo, $marca, $tipoCombustible, $numeroLlantas, $numeroPuestos, $carga, $duracion, $tipoTransmision){
 
-        parent :: __construc($modelo, $marca, $tipoCombustible);
-        $this->numeroLlantas = $numeroLlantas;
-        $this->numeroPuestos = $numeroPuestos;
+        parent::__construc($modelo, $marca, $tipoCombustible, $numeroLlantas, $numeroPuestos, $carga, $duracion);
+
+        $this->tipoTransmision=$tipoTransmision;
+        
 
     }
 
-    public function setNumeroLlantas(){
-        return $this->numeroLlantas;
+    public function setTipoTransmision(){
+        return $this->tipoTransmision;
     }
     
-    public function getNumeroLlantas($numeroLlantas){
-        return $this->numeroLlantas = $numeroLlantas;
+    public function getTipoTransmision($tipoTransmision){
+        return $this->tipoTransmision=$tipoTransmision;
     }
     
-    public function setNumeroPuestos(){
-        return $this->numeroPuestos;
-    }
-    
-    public function getNumeroPuestos($numeroPuestos){
-        return $this->numeroPuestos = $numeroPuestos;
-    }
     
     public function mostrarInf() {
         return (
@@ -37,7 +31,9 @@ class auto extends vehiculo{
             "Modelo". $this->setModelo()."<br>".
             "Marca". $this->setMarca()."<br>".
             "Tipo de combustible". $this->setTipoCombustible()."<br>".
-            "Numero de Lantas $this->numeroLlantas <br>"
+            "Numero de Lantas". $this->setNumeroLlantas()."<br>".
+            "Numero de Puestos". $this->setNumeroPuestos()."<br>".
+            "Numero de Lantas $this->tipoTransmision <br>"
         );
 }
 

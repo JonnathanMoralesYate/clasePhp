@@ -4,19 +4,21 @@ require_once 'Auto.php';
 
 class motoclicleta extends auto{
 
-    private $transmision;
+    private $gama;
 
-    public function __construc($modelo, $marca, $tipoCombustible, $numeroLlantas, $numeroPuestos, $transmision) {
-        parent :: __construc($modelo, $marca, $tipoCombustible, $numeroLlantas, $numeroPuestos);
-        $this->transmision = $transmision;
+    public function __construc($modelo, $marca, $tipoCombustible, $numeroLlantas, $numeroPuestos, $carga, $duracion, $tipoTransmision, $gama) {
+        
+        parent::__construc($modelo, $marca, $tipoCombustible, $numeroLlantas, $numeroPuestos, $carga, $duracion, $tipoTransmision);
+
+        $this->gama=$gama;
     }
 
-    public function setTransmision(){
-        return $this->transmision;
+    public function setGama(){
+        return $this->gama;
     }
     
-    public function getTransmision($transmision){
-        return $this->transmision = $transmision;
+    public function getGama($gama){
+        return $this->gama=$gama;
     }
 
     public function mostrarInf() {
@@ -26,7 +28,9 @@ class motoclicleta extends auto{
             "Marca". $this->setMarca()."<br>".
             "Tipo de combustible". $this->setTipoCombustible()."<br>".
             "Numero de Lantas". $this->setNumeroLlantas()."<br>".
-            "Tipo de transmision $this->transmision"
+            "Numero de Puestos". $this->setNumeroPuestos()."<br>".
+            "Tipo de Transmision". $this->setTipoTransmision()."<br>".
+            "Tipo de transmision $this->gama"
         );
     }
     

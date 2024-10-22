@@ -38,29 +38,32 @@
     <br>
     <br>
 
-    <label for="tipoArma" >Tipo Arma</label>
+    <label for="arma" >Tipo Arma</label>
     <br>
     <br>
 
-    <select name="opcion2" id="opcion2">
-            <option value="0"></option>
-            <option value="1">Acha</option>
-            <option value="2">Espada</option>
-            <option value="3">Dagas</option>
-    </select> 
-    <br>
-    <br>
+    <select name="arma" id="arma">
+
+            <?php
+            // Iterar sobre los valores del Enum
+            foreach (Armas::cases() as $arma) {
+                echo "<option value=\"{$arma->value}\">{$arma->name}</option>";
+            }
+            ?>
+        </select>
+        <br>
+        <br>
 
     <label for="alcance" >Alcance</label>
     <br>
     <br>
-
-    <select name="opcion21" id="opcion21">
-            <option value="0"></option>
-            <option value="1">Corta Distancia</option>
-            <option value="2">Mediana Distancia</option>
-            <option value="3">Larga Distancia</option>
-    </select> 
+    <select name="alcance" id="alcance">
+    <?php
+    // Iterar sobre los valores del Enum
+    foreach (Alcance::cases() as $alcance) {
+    echo "<option value=\"{$alcance->value}\">{$alcance->name}</option>";
+    }
+    ?>
     <br>
     <br>
    
@@ -103,27 +106,31 @@
 
 <?php 
 
-require_once 'circulo.php';
+require_once 'personajeA.php';
+require_once 'mago.php';
+require_once 'guerrero.php';
 
 if(isset($_POST['nomPers']) && isset($_POST['fechaPers']) || isset($_POST['opcion2']) || isset($_POST['opcion21']) || isset($_POST['opcion3']) || isset($_POST['opcion31'])){
 
-    $=$_POST['nomPers'];
-    $=$_POST['fechaPers'];
-    $=$_POST[''];
-    $=$_POST[''];
-    $=$_POST[''];
-    $=$_POST[''];
+    $nomPer=$_POST['nomPers'];
+    $fechaPer=$_POST['fechaPers'];
+    $arma=$_POST['opcion2'];
+    $alcance=$_POST['opcion21'];
+    $poder=$_POST['opcion3'];
+    $elemento=$_POST['opcion31'];
 
 
     $opcion=$_POST['opcion1'];
 
-    $objeto = new circulo($radio);
-
     if($opcion == "1"){
+
+        $objetoG = new guerrero($nomPer, $fechaPer, $arma, $alcance);
 
         echo "Datos del Personaje Guerrero: ". $objeto->area()." cm2";
 
     }else{
+
+        $objetoM = new mago($nomPer, $fechaPer, $poder, $elemento);
 
         echo "Datos del Personaje Mago: ".$objeto->perimetro()." cm";
 

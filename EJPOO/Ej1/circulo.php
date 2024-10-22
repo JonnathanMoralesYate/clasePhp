@@ -9,7 +9,7 @@ class circulo{
     }
 
     public function setRadio(){
-       return $this->radio;
+        return $this->radio;
     }
 
     public function getRadio($radio){
@@ -19,8 +19,6 @@ class circulo{
 
     public function area(){
 
-        $area;
-
         $area = (3.1416)*(pow($this->radio,2));
 
         return $area;
@@ -28,8 +26,6 @@ class circulo{
     }
 
     public function perimetro(){
-
-        $permitro;
 
         $perimetro =(2)*(3.1416)*($this->radio);
 

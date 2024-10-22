@@ -1,6 +1,21 @@
 <?php
 
-class mago extends personaje{
+require_once 'personajeA.php';
+
+enum PoderF: string{
+    case LanzaFuego="fuegoL";
+    case LanzaRoca="roca";
+    case LanzaHielo="hielo";
+}
+
+enum Element: string{
+    case Agua="agua";
+    case Tierra="tierra";
+    case Fuego="fuego";
+    case Aire="aire";
+}
+
+class mago extends personajeZ{
 
     private $poder;
     private $elemento;
@@ -11,7 +26,6 @@ class mago extends personaje{
 
         $this->poder=$poder;
         $this->elemento=$elemento;
-
     }
 
     public function setPoder(){
@@ -22,7 +36,7 @@ class mago extends personaje{
         return $this->poder=$poder;
     }
 
-    public function setElememto(){
+    public function setElememto($elemento){
         return $this->elemento=$elemento;
     }
 
@@ -36,11 +50,10 @@ class mago extends personaje{
             "Fecha Nacimiento: ".$this->setFechaNacim()."<br>".
             "Clase: Mago <br>".
             "Poder del Mago:  $this->poder <br>".
-            "Elemento: $this->elemento";
-        )
+            "Elemento: $this->elemento"
+        );
     }
-  
-    
+
 }
 
 

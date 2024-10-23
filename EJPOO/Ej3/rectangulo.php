@@ -12,19 +12,19 @@ class rectangulo{
 
     }
 
-    public function setLargo(){
+    public function getLargo(){
         return $this->largo;
     }
 
-    public function getLargo($largo){
+    public function setLargo($largo){
         return $this->largo=$largo;
     }
 
-    public function setAncho(){
+    public function getAncho(){
         return $this->ancho;
     }
 
-    public function getAncho($ancho){
+    public function setAncho($ancho){
         return $this->ancho=$ancho;
     }
 

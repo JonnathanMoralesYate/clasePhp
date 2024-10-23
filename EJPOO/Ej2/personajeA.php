@@ -24,25 +24,25 @@ class personajeZ{
 
     }
 
-    public function setNombre(){
+    public function getNombre(){
 
         return $this->nombre;
 
     }
 
-    public function getNombre($nombre){
+    public function setNombre($nombre){
 
         return $this->nombre=$nombre;
 
     }
 
-    public function setFechaNacim(){
+    public function getFechaNacim(){
 
         return $this->fechaNacim;
         
     }
 
-    public function getFechaNacim($fechaNacim){
+    public function setFechaNacim($fechaNacim){
 
         return $this->fechaNacim=$fechaNacim;
 

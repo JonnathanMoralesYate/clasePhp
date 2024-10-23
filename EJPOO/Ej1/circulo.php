@@ -8,11 +8,11 @@ class circulo{
         $this->radio=$radio;
     }
 
-    public function setRadio(){
+    public function getRadio(){
         return $this->radio;
     }
 
-    public function getRadio($radio){
+    public function setRadio($radio){
         return $this->radio=$radio;
     }
 

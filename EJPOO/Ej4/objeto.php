@@ -13,6 +13,7 @@ if(isset($_POST['estudiante']) && isset($_POST['notas'])){
     $estud = new Estudiante($nomb, $nota);
 
     echo $estud->getNombre();
+
     
     //echo $estud->promedioE($nomb, $nota);
 

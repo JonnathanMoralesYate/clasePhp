@@ -28,26 +28,26 @@ class guerrero extends personajeZ{
 
     }
 
-    public function setArma(){
+    public function getArma(){
         return $this->arma;
     }
 
-    public function getArma($arma){
+    public function setArma($arma){
         return $this->arma=$arma;
+    }
+
+    public function getAlcance(){
+        return $this->alcance;
     }
 
     public function setAlcance($alcance){
         return $this->alcance=$alcance;
     }
-
-    public function getAlcance($alcance){
-        return $this->alcance=$alcance;
-    }
-    
+g
     public function mostrar(){
         return(
-            "Nombre del Personaje: ".$this->setNombre()."<br>".
-            "Fecha Nacimiento: ".$this->setFechaNacim()."<br>".
+            "Nombre del Personaje: ".$this->getNombre()."<br>".
+            "Fecha Nacimiento: ".$this->getFechaNacim()."<br>".
             "Clase: Guerrero <br>".
             "Arma:  $this->arma <br>".
             "Alcance: $this->alcance"

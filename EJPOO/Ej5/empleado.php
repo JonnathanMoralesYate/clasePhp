@@ -25,7 +25,7 @@ class Empleado{
     }
 
     public function getSalario(){
-        return $this->nombr;
+        return $this->salario;
     }
 
     public function setSalario($salario){
@@ -57,14 +57,14 @@ class Empleado{
             $total= $this->salario + $compensacion;
              
             return (
-                "La compensacion es: ".$compensacion."<br>".
-                "El Sueldo Total es: ".$total."<br>"
+                "La compensacion es if: ".$compensacion."<br>".
+                "El Sueldo Total es if: ".$total."<br>"
             ); 
 
         }else{
 
             return(
-                "El empleado $this->nombrEmpl <br> Tiene un Salario de: $this->salario"
+                "El empleado $this->nombrEmpl <br> Tiene un Salario de else: $this->salario"
             );
 
         }
@@ -73,20 +73,20 @@ class Empleado{
 
     public function ProveedorC(){
 
-        if($this->compra > 500000){
+        if($this->getCompra() > 500000){
 
-            $descuento1= ($this->compra)*(0.15);
+            $descuento1= ($this->getCompra())*(0.15);
 
             return (
-                "El descuento por la compra es: ".$descuento1
+                "El descuento por la compra es if: ".$descuento1
             );
         }else{
 
-            $descuento2= ($this->compra)*(0.05);
+            $descuento2= ($this->getCompra())*(0.05);
 
             return (
-                "El descuento por la compra es: ".$descuento2;
-            )
+                "El descuento por la compra es else: ".$descuento2
+            );
 
         } 
     }

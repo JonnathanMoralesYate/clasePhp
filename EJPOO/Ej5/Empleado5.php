@@ -1,13 +1,13 @@
 <?php
 
-class Empleado{
+class Empleado5{
 
     private $nombrEmpl;
     private $salario;
     private $nombrProv;
     private $compra;
 
-    public function __construc($nombrEmpl, $salario, $nombrProv, $compra){
+    public function __construct($nombrEmpl, $salario, $nombrProv, $compra){
 
         $this->nombrEmpl=$nombrEmpl;
         $this->salario=$salario;
@@ -16,12 +16,12 @@ class Empleado{
 
     }
 
-    public function getNombr(){
-        return $this->nombr;
+    public function getNombrEmpl(){
+        return $this->nombrEmpl;
     }
 
-    public function setNombr($nombr){
-        return $this->nombr=$nombr;
+    public function setNombrEmpl($nombrEmpl){
+        return $this->nombrEmpl=$nombrEmpl;
     }
 
     public function getSalario(){
@@ -55,16 +55,16 @@ class Empleado{
             $compensacion = ($this->salario)*(0.10);
 
             $total= $this->salario + $compensacion;
-             
+        
             return (
-                "La compensacion es if: ".$compensacion."<br>".
-                "El Sueldo Total es if: ".$total."<br>"
+                "La compensacion es: ".$compensacion."<br>".
+                "El Sueldo Total es: ".$total." COP"."<br>"
             ); 
 
         }else{
 
             return(
-                "El empleado $this->nombrEmpl <br> Tiene un Salario de else: $this->salario"
+                "El empleado $this->nombrEmpl <br> Tiene un Salario de: $this->salario COP <br>"
             );
 
         }
@@ -73,19 +73,21 @@ class Empleado{
 
     public function ProveedorC(){
 
-        if($this->getCompra() > 500000){
+        if($this->compra > 500000){
 
-            $descuento1= ($this->getCompra())*(0.15);
+            $descuento1= $this->compra * 0.15;
 
             return (
-                "El descuento por la compra es if: ".$descuento1
+                "El Proveedor es: $this->nombrProv, Obtuviste un descuento del 15% <br>".
+                "El descuento por la compra es: ".$descuento1
             );
         }else{
 
-            $descuento2= ($this->getCompra())*(0.05);
+            $descuento2= ($this->compra)*(0.05);
 
             return (
-                "El descuento por la compra es else: ".$descuento2
+                "El Proveedor es: $this->nombrProv, Obtuviste un descuento del 5% <br>".
+                "El descuento por la compra es: ".$descuento2
             );
 
         } 

@@ -34,7 +34,7 @@
 </form>
 
 <?php
-require_once 'empleado.php';
+require_once 'Empleado5.php';
 
 if(isset($_POST['nomEmpl']) && isset($_POST['suelEmpl']) && isset($_POST['nomProv']) && isset($_POST['valorComp'])){
 
@@ -43,20 +43,12 @@ if(isset($_POST['nomEmpl']) && isset($_POST['suelEmpl']) && isset($_POST['nomPro
     $nomProv=$_POST['nomProv'];
     $valorComp=$_POST['valorComp'];
 
-    echo $nomEmpl."<br>";
-    echo $suelEmpl."<br>";
-    echo $nomProv."<br>";
-    echo $valorComp."<br>";
-    
-
-   
-
-        $objetoEmpl = new Empleado($nomEmpl, $suelEmpl, $nomProv, $valorComp);
+        $objetoEmpl = new Empleado5($nomEmpl, $suelEmpl, $nomProv, $valorComp);
 
         echo $objetoEmpl->empleadoS();
     
 
-        $objetoProv = new Empleado($nomEmpl, $suelEmpl, $nomProv, $valorComp);
+        $objetoProv = new Empleado5($nomEmpl, $suelEmpl, $nomProv, $valorComp);
 
         echo $objetoProv->proveedorC();
 

@@ -5,12 +5,13 @@
     private $nombre;
     private $notas;
 
-    public function __construc($nombre, $notas){
+    public function __construct($nombre, $notas){
 
         $this->nombre=$nombre;
         $this->notas=$notas;
 
     }
+
 
     public function getNombre(){
         return $this->nombre;
@@ -32,7 +33,7 @@
 
         $cadenaNotas = array_map('intval', explode(',', $this->notas));
 
-        print_r($cadenaNotas)."<br>";
+        //print_r($cadenaNotas)."<br>";   //imprimir el array
 
         $cont=0;
         $acum=0;

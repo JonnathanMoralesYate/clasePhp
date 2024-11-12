@@ -16,7 +16,7 @@ class ProductController{
 
         $database= new Database();
         $this->db = $database->getConnection();
-        $this->productModel= new ProductController($this->db);
+        $this->productModel= new ProductModel($this->db);
     }
 
     public function insertProduct() {

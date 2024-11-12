@@ -5,7 +5,6 @@ class ProductModel{
     private $conn;
     private $table= "productos";
 
-
 public function __construct($db) {
         $this->conn=$db;
     }
@@ -16,6 +15,5 @@ public function insertProduct($codeProduct, $brand, $name, $description){
         $stmt->execute([$codeProduct, $brand, $name, $description]);
     }
 }
-
 
 ?>

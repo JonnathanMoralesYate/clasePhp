@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "usernamehw.errorlens",
-        "christian-kohler.path-intellisense"
+        "formulahendry.auto-close-tag",
+        "visualstudioexptteam.vscodeintellicode"
     ]
 }

@@ -33,6 +33,16 @@ switch($action) {
     }
     break;
 
+    case 'listUsers':
+        $users = $userController->listUsers();
+        include './views/list_users.php';
+        break;
+
+    case 'searchUserByName':
+        $users = $userController->UsersByName();
+        include './';
+        break;
+
 
 
     default:

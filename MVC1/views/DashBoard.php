@@ -36,5 +36,20 @@
 
 </form>
 
+<form action="index.php?action=listProducts" method="GET">
+
+<button type="submit" name="action" value="listProducts">Consultar Productos</button>
+<br>
+<br>
+</form>
+
+<form action="index.php?action=searchProductsCode">
+
+<button type="submit" name="action" value="searchProductsCode">Consultar Productos por Codigo</button>
+<br>
+<br>
+
+</form>
+
 </body>
 </html>

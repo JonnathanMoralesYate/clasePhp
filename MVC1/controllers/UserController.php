@@ -43,7 +43,7 @@ class UserController{
         return $this->userModel->getUsers();
     }
 
-    public function UserByName() {
+    public function UsersByName() {
         $name = $_GET['name'] ?? '';
         return $this->userModel->getUsersByName($name);
     }

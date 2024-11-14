@@ -8,7 +8,7 @@ class UserModel{
     public function __construct($db) {
         $this->conn=$db;
     }
-    //Insecion de datos o registros de usuarios
+    //Insercion de datos o registros de usuarios
     public function insertUser($document_number, $document_type, $name, $phone, $photo) {
         $query = "INSERT INTO ".$this->table." (numero_documento, tipo_documento, nombre, telefono, foto) VALUES( ?, ?, ?, ?, ?)";
         $stmt= $this->conn->prepare($query);

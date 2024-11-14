@@ -1,6 +1,5 @@
 <?php
 
-//require_once './views/insert_user.php';
 require_once './controllers/UserController.php';
 require_once './controllers/ProductController.php';
 
@@ -40,15 +39,22 @@ switch($action) {
 
     case 'searchUserByName':
         $users = $userController->UsersByName();
-        include './';
+        include './views/list_user_By_Name_Form.php';
         break;
 
-
+        case 'listProducts':
+            $products = $productController->listProducts();
+            include './views/list_products.php';
+            break;
+    
+        case 'searchProductsCode':
+         $products = $productController->productsCode($code);
+            include './views/list_products_code.php';
+            break;
 
     default:
     include './views/DashBoard.php';
     break;
-
 
 }
 

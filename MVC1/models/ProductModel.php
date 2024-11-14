@@ -24,9 +24,9 @@ public function insertProduct($codeProduct, $brand, $name, $description){
 
     //Consulta por codigo del producto
     public function getProductsCode($code) {
-        $query = "SELECT * FROM ".$this->table." WHERE nombre LIKE ?";
+        $query = "SELECT * FROM ".$this->table." WHERE codProducto LIKE ?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute(['%'.$code. '%']);
+        $stmt->execute(['%' .$code. '%']);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

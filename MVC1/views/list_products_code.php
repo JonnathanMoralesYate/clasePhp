@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar usuario por Nombre</title>
+    <title>Buscar Producto por Codigo</title>
 </head>
 <body>
     <h1>Buscar Producto por Codigo</h1>
@@ -48,6 +48,10 @@
         </tr>
 
         <?php endforeach; ?>
+
+        </tbody>
+
+        </table>
 
     <?php elseif (isset($products)): ?>
 

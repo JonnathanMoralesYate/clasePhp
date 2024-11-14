@@ -36,7 +36,7 @@ class ProductController{
         return $this->productModel->getProducts();
     }
 
-    public function ProductsCode($code) {
+    public function ProductsCode() {
         $code = $_GET['codigo'] ?? '';
         return $this->productModel->getProductsCode($code);
     }

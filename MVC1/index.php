@@ -42,15 +42,16 @@ switch($action) {
         include './views/list_user_By_Name_Form.php';
         break;
 
-        case 'listProducts':
-            $products = $productController->listProducts();
-            include './views/list_products.php';
-            break;
+    case 'listProducts':
+        $products = $productController->listProducts();
+        include './views/list_products.php';
+        break;
     
-        case 'searchProductsCode':
-         $products = $productController->productsCode($code);
-            include './views/list_products_code.php';
-            break;
+    case 'searchProductsCode':
+        $products = $productController->ProductsCode();
+        //$products = $productController->productsCode($code);
+        include './views/list_products_code.php';
+        break;
 
     default:
     include './views/DashBoard.php';

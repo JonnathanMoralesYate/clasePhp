@@ -1,24 +1,24 @@
 <?php
 //require_once './views/insert_user.php';
-require_once './controllers/UserController.php';
+//require_once './controllers/UserController.php';
 
-$userController = new UserController();
+//$userController = new UserController();
 
 $action = $_GET['action'] ?? 'dashboard';
 
 
 switch($action){
 
-    case 'insertUser';
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+    // case 'insertUser';
+    // if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-        $userController->insertUser();
+    //     $userController->insertUser();
 
-        }else{
+    //     }else{
 
-            include './views/insert_user.php';
-        }
-        break;
+    //         include './views/insert_user.php';
+    //     }
+    //     break;
 
     
 

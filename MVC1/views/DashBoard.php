@@ -15,6 +15,10 @@
 <br>
 <br>
 
+</form>
+
+<form action="index.php?action=insertProduct" method="GET">
+
 <button type="submit" name="action" value="insertProduct">Registrar producto Nuevo</button>
 <br>
 <br>

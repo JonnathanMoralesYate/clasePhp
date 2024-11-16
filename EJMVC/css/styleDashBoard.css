@@ -1,0 +1,55 @@
+ /* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+/* Contenedor del menú */
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+/* Botones del menú */
+.menu button {
+    background-color: #00FFFF;
+    color: #01257D;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.menu button:hover {
+    background-color: #F8F8F9;
+}
+
+/* Lista desplegable oculta */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /*background-color: #4bdf6d;*/
+    /*min-width: 150px;*/
+    max-width: 300px;
+    /*box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);*/
+    /*z-index: 1;*/
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    /*color: rgba(207, 24, 24, 0.785);
+    padding: 10px;*/
+    text-decoration: none;
+    display: block;
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}

@@ -49,7 +49,6 @@ switch($action) {
     
     case 'searchProductsCode':
         $products = $productController->ProductsCode();
-        //$products = $productController->productsCode($code);
         include './views/list_products_code.php';
         break;
 

@@ -1,11 +1,14 @@
 <?php
 
+require_once './controllers/userController.php';
+require_once './controllers/productController.php';
 require_once './controllers/typeDocumentController.php';
 require_once './controllers/classProductController.php';
 //require_once './views/insert_user.php';
-//require_once './controllers/UserController.php';
 
-//$userController = new UserController();
+
+$userController = new UserController();
+$productController = new ProductController();
 $typeDocumentController = new typeDocumentController();
 $classProductController = new classProductController();
 
@@ -15,23 +18,54 @@ $action = $_GET['action'] ?? 'dashboard';
 
 switch($action){
 
-    // case 'insertUser';
-    // if($_SERVER["REQUEST_METHOD"] == "POST"){
+        //Opciones Usuario
+    case 'insertUser';
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    //     $userController->insertUser();
+        $userController->insertUser();
 
-    //     }else{
+        }else{
 
-    //         include './views/insert_user.php';
-    //     }
-    //     break;
+            include './views/insertUser.php';
+        }
+        break;
+
+    case"listUser":
+        $users = $userController->listUsers();
+        include './views/listUsers.php';
+        break;
+
+    case"searchUserByName":
+            $users = $userController->usersByName();    
+        include './views/listUserByName.php';
+        break;
+
+        //Opciones Productos
+    case"insertProduct";
+
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        $productController->insertProduct();
+
+    }else {
+        include './views/insertProduct.php';
+    }
+    break;
+
+    case"listProduct":
+        $products = $productController->listProducts();
+        include './views/listProducts.php';
+        break;
+
+    case"searchProductByCode":
+            $products = $productController->productsCode();
+        include './views/listProductByCode.php';
+        break;
 
 
 
-
-
+        //Opciones tipo documento
     case"insertTypeDocument";
-
     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $typeDocumentController->insertTypeDocument();
@@ -51,7 +85,7 @@ switch($action){
         include './views/listTypeDocumentByName.php';
         break;
 
-
+        //Opciones clase productos
     case"insertClassProduct";
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {

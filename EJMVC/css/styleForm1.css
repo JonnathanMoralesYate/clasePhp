@@ -38,7 +38,16 @@ label {
 input[type="text"] {
     width: 90%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
@@ -68,4 +77,37 @@ button:hover {
 button {
     width: 100%;
     padding: 10px;
+}
+
+#tipoDocum {
+    
+}
+
+select {
+    width: 90%; /* Se ajusta al ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de texto */
+    border: 2px solid #007BFF; /* Borde personalizado */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #F9F9F9; /* Color de fondo */
+    color: #333; /* Color del texto */
+    appearance: none; /* Elimina estilos predeterminados */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    transition: all 0.3s ease; /* Animación de transición */
+}
+
+select:hover {
+    border-color: #0056b3; /* Color del borde al pasar el cursor */
+    background-color: #E9ECEF; /* Fondo al pasar el cursor */
+}
+
+select:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    border-color: #28A745; /* Color del borde en foco */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Sombra al enfocar */
+}
+
+option {
+    background-color: #FFF; /* Fondo para las opciones */
+    color: #333; /* Color del texto */
 }

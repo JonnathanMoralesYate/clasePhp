@@ -19,7 +19,7 @@ class typeDocumentModel{
     public function getDocumentType() {
         $query = "SELECT * FROM ".$this->table;
         $stmt = $this->conn->query($query);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); //método devuelve un array con fetchAll(PDO::FETCH_ASSOC)
     }
 
     //consulta por nombre o iniciales de tipo documento

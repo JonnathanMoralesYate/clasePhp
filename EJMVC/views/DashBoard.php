@@ -22,8 +22,8 @@
                     <button type="submit" name="action" value="listUser">Listado Usuarios</button>
                 </form>
 
-                <form action="index.php?action=searchUserNumDocum" method="GET">
-                    <button type="submit" name="action" value="searchUserNumDocum">Consulta Numero Documento</button>
+                <form action="index.php?action=searchUserByName" method="GET">
+                    <button type="submit" name="action" value="searchUserByName">Consulta Numero Documento</button>
                 </form>
                 
             </div>
@@ -41,8 +41,8 @@
                     <button type="submit" name="action" value="listProduct">Lista de Productos</button>
                 </form>
 
-                <form action="index.php?action=searchProductCode" method="GET">
-                    <button type="submit" name="action" value="searchProductCode">Consulta Codigo Producto</button>
+                <form action="index.php?action=searchProductByCode" method="GET">
+                    <button type="submit" name="action" value="searchProductByCode">Consulta Codigo Producto</button>
                 </form>
 
             </div>

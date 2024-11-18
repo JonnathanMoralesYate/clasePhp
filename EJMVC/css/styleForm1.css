@@ -44,6 +44,32 @@ input[type="text"] {
     font-size: 14px;
 }
 
+/* Estilo del campo de fecha */
+input[type="date"] {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Cambia el borde y el fondo al pasar el ratón */
+input[type="date"]:hover {
+    border-color: #007BFF;
+    background-color: #eaf4ff;
+}
+
+/* Cambia el estilo al hacer clic o al enfocar */
+input[type="date"]:focus {
+    border-color: #0056b3;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px #007BFF;
+}
+
 input[type="number"] {
     width: 90%;
     padding: 10px;

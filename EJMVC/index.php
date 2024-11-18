@@ -2,6 +2,7 @@
 
 require_once './controllers/userController.php';
 require_once './controllers/productController.php';
+require_once './controllers/invoiceController.php';
 require_once './controllers/typeDocumentController.php';
 require_once './controllers/classProductController.php';
 //require_once './views/insert_user.php';
@@ -9,6 +10,7 @@ require_once './controllers/classProductController.php';
 
 $userController = new UserController();
 $productController = new ProductController();
+$invoiceController = new InvoiceController();
 $typeDocumentController = new typeDocumentController();
 $classProductController = new classProductController();
 
@@ -39,6 +41,7 @@ switch($action){
             $users = $userController->usersByName();    
         include './views/listUserByName.php';
         break;
+        
 
         //Opciones Productos
     case"insertProduct";
@@ -63,6 +66,34 @@ switch($action){
         break;
 
 
+        //Opcion factura
+    case"insertInvoice":
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+            $invoiceController->insertInvoice();
+    
+            }else{
+    
+                include './views/insertInvoice.php';
+            }
+            break;
+
+    case"listInvoice":
+        $invoice = $invoiceController->listInvoice();
+        include './views/listInvoice.php';
+        break;
+
+    case"searchInvoiceByDocument":
+        $invoice = $invoiceController->invoiceByDocument();
+        include './views/listInvoiceByDocument.php';
+        break;
+
+    case"searchTypeDocumentByDate":
+        $invoice = $invoiceController->invoiceByDateSale();
+        include './views/listInvoiceByDateSale.php';
+        break;
+
 
         //Opciones tipo documento
     case"insertTypeDocument";
@@ -84,6 +115,7 @@ switch($action){
         $types = $typeDocumentController->typeDocumentoByName();
         include './views/listTypeDocumentByName.php';
         break;
+
 
         //Opciones clase productos
     case"insertClassProduct";

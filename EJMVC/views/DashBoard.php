@@ -60,11 +60,11 @@
                     <button type="submit" name="action" value="listInvoice">Lista de Facturas </button>
                 </form>
 
-                <form action="index.php?action=searchInvoiceByName" method="GET">
-                    <button type="submit" name="action" value="searchInvoiceByName">Consulta por Usuario</button>
+                <form action="index.php?action=searchInvoiceByDocument" method="GET">
+                    <button type="submit" name="action" value="searchInvoiceByDocument">Consulta por Usuario</button>
                 </form>
 
-                <form action="index.php?action=searchTypeDocumentByName" method="GET">
+                <form action="index.php?action=searchTypeDocumentByDate" method="GET">
                     <button type="submit" name="action" value="searchTypeDocumentByDate">Consulta por Fecha</button>
                 </form>
             

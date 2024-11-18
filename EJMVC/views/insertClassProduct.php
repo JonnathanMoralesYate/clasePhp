@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styleForm1.css">
+    <link rel="stylesheet" href="./css/styleForm1.css?v=1.0">
     <title>Registro Clase Producto</title>
 </head>
 <body>

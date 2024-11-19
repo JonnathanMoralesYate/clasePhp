@@ -25,7 +25,7 @@ class InvoiceModel{
 
     //consulta inner join
     public function getInvoiceView() {
-        $query = "SELECT idFactura, usuarios.idUsua, usuarios.nombre, productos.nombre, productos.marca, productos.descripcion, fecha, cantidad FROM ".$this->table." INNER JOIN usuarios ON factura.idUsua = usuarios.idUsua INNER JOIN productos ON factura.codProducto = productos.codProducto";
+        $query = "SELECT idFactura, usuarios.idUsua, usuarios.nombre AS 'Nombre Cliente', productos.nombre AS 'Nombre Producto', productos.marca, productos.descripcion, fecha, cantidad FROM ".$this->table." INNER JOIN usuarios ON factura.idUsua = usuarios.idUsua INNER JOIN productos ON factura.codProducto = productos.codProducto";
         $stmt = $this->conn->query($query);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

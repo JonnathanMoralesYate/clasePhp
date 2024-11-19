@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styleConsulta.css?v=1.0">
+    <link rel="stylesheet" href="./css/styleConsulta.css">
     <title>Lista de Facturas</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
     <table border="1" class="styled-table">
         <thead>
 
-        <tr>
+        <tr class="active-row">
 
             <th>Numero Factura</th>
             <th>Id. Cliente</th>

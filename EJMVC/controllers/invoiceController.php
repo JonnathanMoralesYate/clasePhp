@@ -37,6 +37,10 @@ class InvoiceController{
         return $this->invoiceModel->getInvoice();
     }
 
+    public function listInvioceView() {
+        return $this->invoiceModel->getInvoiceView();
+    }
+
     public function invoiceByDocument() {
         $documentNumber = $_GET['numDocument'] ?? '';
         return $this->invoiceModel->getInvoiceByDocument($documentNumber);

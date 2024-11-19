@@ -37,6 +37,10 @@ class UserController{
         return $this->userModel->getUsers();
     }
 
+    public function listUsersView() {
+        return $this->userModel->getUsersView();
+    }
+
     public function usersByName() {
         $name = $_GET['name'] ?? '';
         return $this->userModel->getUsersByName($name);

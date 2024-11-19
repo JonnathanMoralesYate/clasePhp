@@ -22,6 +22,13 @@ public function insertProduct($codeProduct, $classProduct, $brand, $name, $descr
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    //consulta general con inner join
+    public function getProductsView() {
+        $query = "SELECT codproducto, claseProducto.clase, marca, nombre, descripcion FROM ".$this->table." INNER JOIN claseProducto ON productos.idProduc = claseProducto.idProduc";
+        $stmt = $this->conn->query($query);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     //Consulta por codigo del producto
     public function getProductsCode($code) {
         $query = "SELECT * FROM ".$this->table." WHERE codProducto LIKE ?";

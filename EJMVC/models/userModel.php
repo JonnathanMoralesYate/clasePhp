@@ -21,6 +21,13 @@ class UserModel{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    //consulta general con inner join
+    public function getUsersView() {
+        $query = "SELECT tipoDocumento.documento, idUsua, nombre, celular FROM ".$this->table." INNER JOIN tipoDocumento ON usuarios.idDocum = tipoDocumento.idDocum";
+        $stmt = $this->conn->query($query);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     //Consulta por parametro
     public function getUsersByName($name) {
         $query = "SELECT * FROM ".$this->table." WHERE nombre LIKE ?";

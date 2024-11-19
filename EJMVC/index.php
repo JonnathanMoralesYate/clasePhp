@@ -33,8 +33,8 @@ switch($action){
         break;
 
     case"listUser":
-        $users = $userController->listUsers();
-        include './views/listUsers.php';
+        $users = $userController->listUsersView();
+        include './views/listUsersView.php';
         break;
 
     case"searchUserByName":
@@ -56,8 +56,8 @@ switch($action){
     break;
 
     case"listProduct":
-        $products = $productController->listProducts();
-        include './views/listProducts.php';
+        $products = $productController->listProductsView();
+        include './views/listProductsView.php';
         break;
 
     case"searchProductByCode":
@@ -80,8 +80,8 @@ switch($action){
             break;
 
     case"listInvoice":
-        $invoice = $invoiceController->listInvoice();
-        include './views/listInvoice.php';
+        $invoice = $invoiceController->listInvoiceView();
+        include './views/listInvoiceView.php';
         break;
 
     case"searchInvoiceByDocument":

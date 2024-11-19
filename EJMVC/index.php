@@ -80,7 +80,7 @@ switch($action){
             break;
 
     case"listInvoice":
-        $invoice = $invoiceController->listInvoiceView();
+        $invoice = $invoiceController->listInvioceView();
         include './views/listInvoiceView.php';
         break;
 

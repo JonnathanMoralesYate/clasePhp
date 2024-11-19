@@ -37,7 +37,7 @@ class InvoiceController{
         return $this->invoiceModel->getInvoice();
     }
 
-    public function listInvoiceView() {
+    public function listInvioceView() {
         return $this->invoiceModel->getInvoiceView();
     }
 

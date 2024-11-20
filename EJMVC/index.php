@@ -144,6 +144,16 @@ switch($action){
             include './views/DashBoard.php';
             break;
 
+    case"openFormDelete":
+        $class = $classProductController->listClassProduct();
+        include './views/listClassProductByNameDelete.php';
+        break;
+
+        case"deleteClass";
+        $class = $classProductController->deleteClassProduct();
+        include './views/DashBoard.php';
+        break;
+        
     case"listClassProduct":
         $class = $classProductController->listClassProduct();
         include './views/listClassProduct.php';

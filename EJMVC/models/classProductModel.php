@@ -31,10 +31,17 @@ class classProductModel{
     }
 
     //actualizar clase del producto
-    public function updateClass($product_class) {
-        $query = "UPDATE ".$this->table." SET clase=? WHERE idproduc=?";
+    public function updateClass($product_class, $idClass) {
+        $query = "UPDATE ".$this->table." SET clase=? WHERE idProduc=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execuse([$product_class]);
+        $stmt->execute([$product_class, $idClass]);
+    }
+
+    //Eliminar clase del producto
+    public function deleteClass($idClass) {
+        $query = "DELETE FROM ".$this->table." WHERE idProduc=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$idClass]);
     }
 
 }

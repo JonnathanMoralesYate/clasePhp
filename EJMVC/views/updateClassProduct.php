@@ -13,7 +13,7 @@
         <form action="index.php?action=updateClass" method="post">
 
                 <?php foreach($class as $clas): ?>
-            <input type="hidden" name="id" value=<?= $clas['idProduc']; ?>>
+            <input type="hidden" name="idClass" value=<?= $clas['idProduc']; ?>>
                 <?php endforeach; ?>
             <label for="clase_producto">Clase del Producto</label>
 

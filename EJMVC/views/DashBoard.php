@@ -103,8 +103,8 @@
                     <button type="submit" name="action" value="openFormUpdate">Actualizar Clase Producto</button>
                 </form>
 
-                <form action="index.php?action=deleteClassProduct" method="GET">
-                    <button type="submit" name="action" value="deleteClassProduct">Eliminar Clase Producto</button>
+                <form action="index.php?action=openFormDelete" method="GET">
+                    <button type="submit" name="action" value="openFormDelete">Eliminar Clase Producto</button>
                 </form>
 
                 <form action="index.php?action=listClassProduct" method="GET">

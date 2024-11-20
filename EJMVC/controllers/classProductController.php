@@ -39,11 +39,20 @@ class classProductController{
     public function updateClassProduct() {
         if($_SERVER["REQUEST_METHOD"] == "POST") {
             $product_class = $_POST['clase_producto'];
+            $idClass = $_POST['idClass'];
 
-            $this->classProductModel->updateClass($product_class);
+            $this->classProductModel->updateClass($product_class, $idClass);
             header("Location: index.php?action=dashboard");
         }
     }
+
+    public function deleteClassProduct() {
+        $idClass = $_GET['idClass'] ?? '';
+        //$datosClass = $this->classProductModel->deleteClass($idClass);
+        $this->classProductModel->deleteClass($idClass);
+        }
+
+
     
 }
 

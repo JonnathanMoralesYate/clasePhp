@@ -35,6 +35,15 @@ class classProductController{
         $nameClass = $_GET['nombre_clase'] ?? '';
         return $this->classProductModel->getProductClassByName($nameClass);
     }
+
+    public function updateClassProduct() {
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            $product_class = $_POST['clase_producto'];
+
+            $this->classProductModel->updateClass($product_class);
+            header("Location: index.php?action=dashboard");
+        }
+    }
     
 }
 

@@ -129,6 +129,21 @@ switch($action){
     }
     break;
 
+    case"openFormUpdate":
+        $class = $classProductController->listClassProduct();
+        include './views/listClassProductoByNameUpdate.php';
+        break;
+
+        case"searchClassProductByNameU":
+            $class = $classProductController->ClassProductByName();
+            include './views/updateClassProduct.php';
+            break;
+
+        case"updateClass":
+            $class = $classProductController->updateClassProduct();
+            include './views/DashBoard.php';
+            break;
+
     case"listClassProduct":
         $class = $classProductController->listClassProduct();
         include './views/listClassProduct.php';

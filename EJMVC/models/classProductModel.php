@@ -30,6 +30,13 @@ class classProductModel{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    //actualizar clase del producto
+    public function updateClass($product_class) {
+        $query = "UPDATE ".$this->table." SET clase=? WHERE idproduc=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execuse([$product_class]);
+    }
+
 }
 
 ?>

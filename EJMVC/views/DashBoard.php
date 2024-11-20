@@ -99,6 +99,14 @@
                     <button type="submit" name="action" value="insertClassProduct">Registro Clase Producto</button>
                 </form>
 
+                <form action="index.php?action=openFormUpdate" method="GET">
+                    <button type="submit" name="action" value="openFormUpdate">Actualizar Clase Producto</button>
+                </form>
+
+                <form action="index.php?action=deleteClassProduct" method="GET">
+                    <button type="submit" name="action" value="deleteClassProduct">Eliminar Clase Producto</button>
+                </form>
+
                 <form action="index.php?action=listClassProduct" method="GET">
                     <button type="submit" name="action" value="listClassProduct">Lista de Clases de Productos</button>
                 </form>

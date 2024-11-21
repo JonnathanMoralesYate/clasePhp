@@ -80,6 +80,14 @@
                     <button type="submit" name="action" value="insertTypeDocument">Registro Tipo Documento</button>
                 </form>
 
+                <form action="index.php?action=openFormUpdateType" method="GET">
+                    <button type="submit" name="action" value="openFormUpdateType">Actualizar Tipo Documento</button>
+                </form>
+
+                <form action="index.php?action=openFormDeleteType" method="GET">
+                    <button type="submit" name="action" value="openFormDeleteType">Eliminar Tipo Documento</button>
+                </form>
+
                 <form action="index.php?action=listTypeDocument" method="GET">
                     <button type="submit" name="action" value="listTypeDocument">Lista de Tipo Documento </button>
                 </form>

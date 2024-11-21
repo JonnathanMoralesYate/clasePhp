@@ -51,8 +51,6 @@ class classProductController{
         //$datosClass = $this->classProductModel->deleteClass($idClass);
         $this->classProductModel->deleteClass($idClass);
         }
-
-
     
 }
 

@@ -36,6 +36,21 @@ class typeDocumentController{
         $name = $_GET['nombre'] ?? '';
         return $this->typeDocumentModel->getDocumentTypeByName($name);
     }
+
+    public function updateTypeDocument() {
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            $document_type = $_POST['tipo_documento'];
+            $idType = $_POST['idType'];
+
+            $this->typeDocumentModel->updateType($document_type, $idType);
+            header("Location: index.php?action=dashboard");
+        }
+    }
+
+    public function deleteTypeProduct() {
+        $idType = $_GET['idType'] ?? '';
+        $this->typeDocumentModel->deleteType($idType);
+        }
     
 }
 

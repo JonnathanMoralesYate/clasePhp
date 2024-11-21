@@ -106,6 +106,32 @@ switch($action){
     }
     break;
 
+    case"openFormUpdateType":
+        $types = $typeDocumentController->listTypeDocument(); 
+        include './views/listTypeDocumentByNameUpdate.php';
+        break;
+
+        case"searchTypeDocumentByNameU":
+            $types = $typeDocumentController->typeDocumentoByName();
+            include './views/updateTypeProduct.php';
+            break;
+
+        case"updateType":
+            $types = $typeDocumentController->updateTypeDocument();
+            include './views/DashBoard.php';
+            break;
+
+    case"openFormDeleteType":
+        $types = $typeDocumentController->listTypeDocument();
+         include './views/listTypeDocumentByNameDelete.php';
+         break;
+
+         case"deleteType":
+            $types = $typeDocumentController->deleteTypeProduct();
+             include './views/DashBoard.php';
+             break;
+    
+
     case"listTypeDocument":
         $types = $typeDocumentController->listTypeDocument();
         include 'views/listTypeDocument.php';

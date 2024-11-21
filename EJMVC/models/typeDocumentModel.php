@@ -30,6 +30,20 @@ class typeDocumentModel{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    //actualizar clase del producto
+    public function updateType($document_type, $idType) {
+        $query = "UPDATE ".$this->table." SET documento=? WHERE idDocum=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$document_type, $idType]);
+    }
+
+    //Eliminar clase del producto
+    public function deleteType($idType) {
+        $query = "DELETE FROM ".$this->table." WHERE idDocum=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$idType]);
+    }
+
 
 
 }

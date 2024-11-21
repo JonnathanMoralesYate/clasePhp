@@ -18,6 +18,14 @@
                     <button type="submit" name="action" value="insertUser">Registro Usuario</button>
                 </form>
 
+                <form action="index.php?action=openFormUpdateU" method="GET">
+                    <button type="submit" name="action" value="openFormUpdateU">Actualizar Usuario</button>
+                </form>
+
+                <form action="index.php?action=openFormDeleteUser" method="GET">
+                    <button type="submit" name="action" value="openFormDeleteUser">Eliminar Usuario</button>
+                </form>
+
                 <form action="index.php?action=listUser" method="GET">
                     <button type="submit" name="action" value="listUser">Listado Usuarios</button>
                 </form>
@@ -37,6 +45,14 @@
                     <button type="submit" name="action" value="insertProduct">Registro Producto</button>
                 </form>
 
+                <form action="index.php?action=openFormUpdateP" method="GET">
+                    <button type="submit" name="action" value="openFormUpdateP">Actualizar Producto</button>
+                </form>
+
+                <form action="index.php?action=openFormDeleteP" method="GET">
+                    <button type="submit" name="action" value="openFormDeleteP">Eliminar Producto</button>
+                </form>
+
                 <form action="index.php?action=listProduct" method="GET">
                     <button type="submit" name="action" value="listProduct">Lista de Productos</button>
                 </form>
@@ -54,6 +70,14 @@
             <div id="dropdown3" class="dropdown-content">
                 <form action="index.php?action=insertInvoice" method="GET">
                     <button type="submit" name="action" value="insertInvoice">Registro Factura</button>
+                </form>
+
+                <form action="index.php?action=openFormUpdateF" method="GET">
+                    <button type="submit" name="action" value="openFormUpdateF">Actualizar Clase Producto</button>
+                </form>
+
+                <form action="index.php?action=openFormDeleteF" method="GET">
+                    <button type="submit" name="action" value="openFormDeleteF">Eliminar Clase Producto</button>
                 </form>
 
                 <form action="index.php?action=listInvoice" method="GET">

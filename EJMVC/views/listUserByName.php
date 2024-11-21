@@ -44,7 +44,7 @@
         <tr>
 
         <td><?= $user['idUsua']; ?></td>
-        <td><?= $user['idDocum']; ?></td>
+        <td><?= $user['documento']; ?></td>
         <td><?= $user['nombre']; ?></td>
         <td><?= $user['celular']; ?></td>
 

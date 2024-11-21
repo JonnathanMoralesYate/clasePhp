@@ -30,12 +30,20 @@ public function insertProduct($codeProduct, $classProduct, $brand, $name, $descr
     }
 
     //Consulta por codigo del producto
-    public function getProductsCode($code) {
-        $query = "SELECT * FROM ".$this->table." WHERE codProducto LIKE ?";
+    public function getProductsCodeView($code) {
+        $query = "SELECT * FROM ".$this->table." WHERE codproducto=?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute(['%' .$code. '%']);
+        $stmt->execute([$code]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getProductsCode($code) {
+        $query = "SELECT codproducto, claseProducto.clase, marca, nombre, descripcion FROM ".$this->table." INNER JOIN claseProducto ON productos.idProduc = claseProducto.idProduc WHERE codproducto=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$code]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
 
 

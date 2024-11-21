@@ -42,8 +42,13 @@ class ProductController{
     }
 
     public function productsCode() {
+        $code1 = $_GET['codigo1'] ?? '';
+        return $this->productModel->getProductsCode($code1);
+    }
+
+    public function productsCodeView() {
         $code = $_GET['codigo'] ?? '';
-        return $this->productModel->getProductsCode($code);
+        return $this->productModel->getProductsCodeView($code);
     }
 
 }

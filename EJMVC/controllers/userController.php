@@ -46,9 +46,29 @@ class UserController{
         return $this->userModel->getUsersByName($name);
     }
 
+    public function usersByNameView() {
+        $idUsu = $_GET['idUsuario'] ?? '';
+        return $this->userModel->getUsersByIdUsuView($idUsu);
+    }
+
+    public function updateUser() {
+
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            $document_number = $_POST['numero_documento'];
+            $document_type = $_POST['tipoDocum'];
+            $name = $_POST['nombre'];
+            $phone = $_POST['telefono'];
+            
+            $this->userModel->updateUser($document_type, $name, $phone, $document_number);
+            header("Location: index.php?action=dasboard");
+        }
+    }
+
+    public function deleteUser() {
+        $document_number = $_GET['numero_documento'] ?? '';
+        $this->userModel->deleteUser($document_number);
+    }
 
 }
-
-
 
 ?>

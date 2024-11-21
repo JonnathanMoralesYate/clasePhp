@@ -32,6 +32,33 @@ switch($action){
         }
         break;
 
+    case"openFormUpdateU";
+        $users = $userController->listUsersView();
+        include './views/listUserByIdUsuUpdate.php';
+        break;
+
+        case"searchUserByNameU";
+            $users = $userController->usersByNameView();
+            $types = $typeDocumentController->listTypeDocument();
+            include './views/updateUser.php';
+            break;
+
+        case"updateUser";
+            $users = $userController->updateUser();
+            include './views/DashBoard.php';
+            break;
+
+
+    case"openFormDeleteUser";
+        $users = $userController->listUsersView();
+    include './views/listUserByIdUsuDelete.php';
+    break;
+
+        case"deleteUser";
+        $users = $userController->deleteUser();
+        include './views/DashBoard.php';
+        break;
+
     case"listUser":
         $users = $userController->listUsersView();
         include './views/listUsersView.php';
@@ -55,13 +82,39 @@ switch($action){
     }
     break;
 
+    case"openFormUpdateP":
+        $products = $productController->listProductsView();
+        include '';
+        break;
+
+        case"searchProductByCodeU":
+            $products = $productController->productsCodeView();
+            $class = $classProductController->listClassProduct();
+            include '';
+            break;
+
+        case"":
+
+            include '';
+            break;
+
+    case"openFormDeleteP":
+
+        include '';
+        break;
+
+        case"":
+
+            include '';
+            break;
+
     case"listProduct":
         $products = $productController->listProductsView();
         include './views/listProductsView.php';
         break;
 
     case"searchProductByCode":
-            $products = $productController->productsCode();
+        $products = $productController->productsCode();
         include './views/listProductByCode.php';
         break;
 
@@ -123,13 +176,13 @@ switch($action){
 
     case"openFormDeleteType":
         $types = $typeDocumentController->listTypeDocument();
-         include './views/listTypeDocumentByNameDelete.php';
-         break;
+        include './views/listTypeDocumentByNameDelete.php';
+        break;
 
-         case"deleteType":
+        case"deleteType":
             $types = $typeDocumentController->deleteTypeProduct();
-             include './views/DashBoard.php';
-             break;
+            include './views/DashBoard.php';
+            break;
     
 
     case"listTypeDocument":

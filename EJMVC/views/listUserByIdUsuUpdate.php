@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styleConsulta.css?v=1.0">
-    <title>Buscar Producto por Codigo</title>
+    <title>Actualizar usuario por ID</title>
 </head>
 <body>
 <div class="container">
-    <h1>Buscar Producto por Codigo</h1>
+    <h1>Actualizar usuario por ID</h1>
     <div class="navigation">
-    <form action="index.php?action=searchProductByCode" method="get">
-        <input type="hidden" name="action" value="searchProductByCode">
-        <input type="text" name="codigo1" require>
+    <form action="index.php?action=searchUserByNameU" method="get">
+        <input type="hidden" name="action" value="searchUserByNameU">
+        <input type="text" name="idUsuario" require>
         <input type="submit" value="Buscar">
         <br>
         <br>
     </form>
     </div>
 
-    <?php if (isset($products) && count($products) > 0): ?>
+    <?php if (isset($users) && count($users) > 0): ?>
 
         <h2>Resultados de la Busqueda:</h2>
 
@@ -28,11 +28,10 @@
 
         <tr>
 
-        <th>Codigo del producto</th>
-            <th>Clase</th>
-            <th>Marca</th>
+            <th>Numero de Documento</th>
+            <th>Tipo de Documento</th>
             <th>Nombre</th>
-            <th>Descripcion</th>
+            <th>telefono</th>
         
         </tr>
 
@@ -40,27 +39,26 @@
 
         <tbody>
 
-        <?php foreach($products as $product): ?>
+        <?php foreach ($users as $user): ?>
 
-<tr>
+        <tr>
 
-<td><?= $product['codproducto']; ?></td>
-<td><?= $product['clase']; ?></td>
-<td><?= $product['marca']; ?></td>
-<td><?= $product['nombre']; ?></td>
-<td><?= $product['descripcion']; ?></td>
+        <td><?= $user['idUsua']; ?></td>
+        <td><?= $user['documento']; ?></td>
+        <td><?= $user['nombre']; ?></td>
+        <td><?= $user['celular']; ?></td>
 
-</tr>
+        </tr>
 
-<?php endforeach; ?>
+        <?php endforeach; ?>
 
         </tbody>
 
     </table>
 
-    <?php elseif (isset($products)): ?>
+    <?php elseif (isset($users)): ?>
 
-        <p>No se Encontraron Producto con ese Codigo</p>
+        <p>No se Encontraron Usuarios con ese Nombre</p>
 
         <?php endif; ?>
         <br>

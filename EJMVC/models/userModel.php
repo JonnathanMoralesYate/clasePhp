@@ -28,17 +28,35 @@ class UserModel{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    //consulta general con condicion where
+    public function getUsersByIdUsuView($idUsu) {
+        $query = "SELECT * FROM ".$this->table." WHERE idUsua=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$idUsu]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     //Consulta por parametro
     public function getUsersByName($name) {
-        $query = "SELECT * FROM ".$this->table." WHERE nombre LIKE ?";
+        $query = "SELECT tipoDocumento.documento, idUsua, nombre, celular FROM ".$this->table." INNER JOIN tipoDocumento ON usuarios.idDocum = tipoDocumento.idDocum WHERE nombre LIKE ?";
         $stmt = $this->conn->prepare($query);
         $stmt->execute(['%'.$name. '%']);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    //actualizar datos de usuarios
+    public function updateUser($document_type, $name, $phone, $document_number) {
+        $query = "UPDATE ".$this->table." SET idDocum=?, nombre=?, celular=? WHERE idUsua=?";
+        $stmt= $this->conn->prepare($query);
+        $stmt->execute([$document_type, $name, $phone, $document_number]);
+    }
 
+    //eliminar usuario
+    public function deleteUser($document_number) {
+        $query = "DELETE FROM ".$this->table." WHERE idUsua=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$document_number]);
+    }
 
 }
-
-
 ?>

@@ -10,9 +10,9 @@
 <div class="container">
     <h1>Buscar Producto por Codigo</h1>
     <div class="navigation">
-    <form action="index.php?action=searchProductByCode" method="get">
-        <input type="hidden" name="action" value="searchProductByCode">
-        <input type="text" name="codigo1" require>
+    <form action="index.php?action=searchProductByCodeU" method="get">
+        <input type="hidden" name="action" value="searchProductByCodeU">
+        <input type="text" name="codigo" require>
         <input type="submit" value="Buscar">
         <br>
         <br>
@@ -45,7 +45,7 @@
 <tr>
 
 <td><?= $product['codproducto']; ?></td>
-<td><?= $product['clase']; ?></td>
+<td><?= $product['idProduc']; ?></td>
 <td><?= $product['marca']; ?></td>
 <td><?= $product['nombre']; ?></td>
 <td><?= $product['descripcion']; ?></td>
@@ -58,7 +58,7 @@
 
     </table>
 
-    <?php elseif (isset($products)): ?>
+    <?php elseif (isset($product)): ?>
 
         <p>No se Encontraron Producto con ese Codigo</p>
 

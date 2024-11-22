@@ -41,14 +41,33 @@ class ProductController{
         return $this->productModel->getProductsView();
     }
 
-    public function productsCode() {
+    public function productsByCodes() {
         $code1 = $_GET['codigo1'] ?? '';
-        return $this->productModel->getProductsCode($code1);
+        return $this->productModel->getProductsCodeN($code1);
     }
 
     public function productsCodeView() {
         $code = $_GET['codigo'] ?? '';
-        return $this->productModel->getProductsCodeView($code);
+        return $this->productModel->getProductsCodeView1($code);
+    }
+
+    public function updatetProduct() {
+        
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            $codeProduct = $_POST['codigoProduc'];
+            $classProduct = $_POST['claseProduc'];
+            $brand = $_POST['marcaP'];
+            $name = $_POST['nombreP'];
+            $description = $_POST['descripcionP'];
+
+            $this->productModel->updateProduct($classProduct, $brand, $name, $description, $codeProduct);
+            header("Location: index.php?action=dasboard");
+        }
+    }
+
+    public function deleteProduct() {
+        $codeProduct = $_GET['code'] ?? '';
+        $this->productModel->getdeleteProduct($codeProduct);
     }
 
 }

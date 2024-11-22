@@ -65,7 +65,7 @@ switch($action){
         break;
 
     case"searchUserByName":
-            $users = $userController->usersByName();    
+        $users = $userController->usersByName();    
         include './views/listUserByName.php';
         break;
         
@@ -84,28 +84,28 @@ switch($action){
 
     case"openFormUpdateP":
         $products = $productController->listProductsView();
-        include '';
+        include './views/listProductByCodeUpdate.php';
         break;
 
         case"searchProductByCodeU":
             $products = $productController->productsCodeView();
             $class = $classProductController->listClassProduct();
-            include '';
+            include './views/updateProduct.php';
             break;
 
-        case"":
-
-            include '';
+        case"updateProduct":
+            $products = $productController->updatetProduct();
+            include './views/DashBoard.php';
             break;
 
     case"openFormDeleteP":
-
-        include '';
+        $products = $productController->listProductsView();
+        include './views/listProductByCodeDelete.php';
         break;
 
-        case"":
-
-            include '';
+        case"deleteProduct":
+            $products = $productController->deleteProduct();
+            include './views/DashBoard.php';
             break;
 
     case"listProduct":
@@ -114,7 +114,7 @@ switch($action){
         break;
 
     case"searchProductByCode":
-        $products = $productController->productsCode();
+        $products = $productController->productsByCodes();
         include './views/listProductByCode.php';
         break;
 

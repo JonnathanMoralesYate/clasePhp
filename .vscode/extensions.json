@@ -2,6 +2,9 @@
     "recommendations": [
         "usernamehw.errorlens",
         "formulahendry.auto-close-tag",
-        "visualstudioexptteam.vscodeintellicode"
+        "visualstudioexptteam.vscodeintellicode",
+        "xdebug.php-debug",
+        "xdebug.php-pack",
+        "bmewburn.vscode-intelephense-client"
     ]
 }

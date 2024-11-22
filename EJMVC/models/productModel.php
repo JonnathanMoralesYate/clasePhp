@@ -30,18 +30,32 @@ public function insertProduct($codeProduct, $classProduct, $brand, $name, $descr
     }
 
     //Consulta por codigo del producto
-    public function getProductsCodeView($code) {
+    public function getProductsCodeView1($code) {
         $query = "SELECT * FROM ".$this->table." WHERE codproducto=?";
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$code]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getProductsCode($code) {
-        $query = "SELECT codproducto, claseProducto.clase, marca, nombre, descripcion FROM ".$this->table." INNER JOIN claseProducto ON productos.idProduc = claseProducto.idProduc WHERE codproducto=?";
+    public function getProductsCodeN($code1) {
+        $query = "SELECT codproducto, claseProducto.clase, marca, nombre, descripcion FROM ".$this->table." INNER JOIN claseProducto ON productos.idProduc = claseProducto.idProduc WHERE codproducto LIKE ?";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute([$code]);
+        $stmt->execute(['%'.$code1.'%']);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //Actualizar Producto
+    public function updateProduct($classProduct, $brand, $name, $description, $codeProduct){
+        $query= "UPDATE ".$this->table." SET idProduc=?, marca=?, nombre=?, descripcion=? WHERE codproducto=?";
+        $stmt= $this->conn->prepare($query);
+        $stmt->execute([$classProduct, $brand, $name, $description, $codeProduct]);
+    }
+
+    //Eliminar Producto
+    public function getdeleteProduct($codeProduct) {
+        $query = "DELETE FROM ".$this->table." WHERE codproducto=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([$codeProduct]);
     }
 
 }

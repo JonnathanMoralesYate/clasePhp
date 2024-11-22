@@ -28,7 +28,7 @@
 
         <tr>
 
-        <th>Codigo del producto</th>
+            <th>Codigo del producto</th>
             <th>Clase</th>
             <th>Marca</th>
             <th>Nombre</th>
@@ -42,7 +42,7 @@
 
         <?php foreach($products as $product): ?>
 
-<tr>
+<tr class="active-row">
 
 <td><?= $product['codproducto']; ?></td>
 <td><?= $product['clase']; ?></td>
@@ -54,7 +54,7 @@
 
 <?php endforeach; ?>
 
-        </tbody>
+</tbody>
 
     </table>
 

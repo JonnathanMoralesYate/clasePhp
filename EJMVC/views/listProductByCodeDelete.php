@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styleConsulta.css?v=1.0">
-    <title>Actualizar Producto por Codigo</title>
+    <title>Eliminar Producto por Codigo</title>
 </head>
 <body>
 <div class="container">
-    <h1>Actualizar Producto por Codigo</h1>
+    <h1>Eliminar Producto por </h1>
     <div class="navigation">
-    <form action="index.php?action=searchProductByCodeU" method="get">
-        <input type="hidden" name="action" value="searchProductByCodeU">
-        <input type="text" name="codigo" require>
-        <input type="submit" value="Buscar">
+    <form action="index.php?action=deleteProduct" method="get">
+        <input type="hidden" name="action" value="deleteProduct">
+        <input type="text" name="code" require>
+        <input type="submit" value="Eliminar">
         <br>
         <br>
     </form>

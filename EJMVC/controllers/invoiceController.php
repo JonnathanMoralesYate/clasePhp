@@ -37,6 +37,11 @@ class InvoiceController{
         return $this->invoiceModel->getInvoice();
     }
 
+    public function listInvoiceUpdate() {
+        $idInvoice = $_GET['idFactura'] ?? '';
+        return $this->invoiceModel->getInvoiceByIdInvoice($idInvoice);
+    }
+
     public function listInvioceView() {
         return $this->invoiceModel->getInvoiceView();
     }
@@ -49,6 +54,24 @@ class InvoiceController{
     public function invoiceByDateSale() {
         $date_sale = $_GET['fechaV'] ?? '';
         return $this->invoiceModel->getInvoiceByDateSale($date_sale);
+    }
+
+    public function updateInvoice() {
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            $idInvoice = $_POST['idFactura'];
+            $document_number = $_POST['numero_documento'];
+            $product_code = $_POST['codigoProduc'];
+            $date = $_POST['fechaV'];
+            $quantity = $_POST['cantidadP'];
+            
+            $this->invoiceModel->updateInvoice($document_number, $product_code, $date, $quantity, $idInvoice);
+            header("Location: index.php?action=dasboard");
+        }
+    }
+
+    public function deleteInvoice() {
+        $idInvoice = $_GET['idFactura'] ?? '';
+        $this->invoiceModel->deleteByIdInvoice($idInvoice);
     }
 }
 

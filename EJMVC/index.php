@@ -132,6 +132,32 @@ switch($action){
             }
             break;
 
+
+    case"openFormUpdateF":
+        $invoice = $invoiceController->invoiceByDocument();
+        include './views/listInvoiceByDocumentUpdate.php';
+        break;
+
+        case"searchInvoiceByDocumentU":
+            $invoice = $invoiceController->listInvoiceUpdate();
+            include './views/updateInvoice.php';
+            break;
+
+        case"updateInvoice":
+            $invoice = $invoiceController->updateInvoice();
+            include './views/DashBoard.php';
+            break;
+
+    case"openFormDeleteF":
+        $invoice = $invoiceController->invoiceByDocument();
+        include './views/listInvoiceByIdDelete.php';
+        break;
+
+        case"deleteInvoice":
+            $invoice = $invoiceController->deleteInvoice();
+            include './views/DashBoard.php';
+            break;
+
     case"listInvoice":
         $invoice = $invoiceController->listInvioceView();
         include './views/listInvoiceView.php';

@@ -73,11 +73,11 @@
                 </form>
 
                 <form action="index.php?action=openFormUpdateF" method="GET">
-                    <button type="submit" name="action" value="openFormUpdateF">Actualizar Clase Producto</button>
+                    <button type="submit" name="action" value="openFormUpdateF">Actualizar Factura</button>
                 </form>
 
                 <form action="index.php?action=openFormDeleteF" method="GET">
-                    <button type="submit" name="action" value="openFormDeleteF">Eliminar Clase Producto</button>
+                    <button type="submit" name="action" value="openFormDeleteF">Eliminar Factura</button>
                 </form>
 
                 <form action="index.php?action=listInvoice" method="GET">

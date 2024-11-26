@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styleForm1.css?v=1.0">
+    <link rel="stylesheet" href="./css/styleForm1.css">
     <title>Registrar Factura</title>
 </head>
 <body>
@@ -14,13 +14,23 @@
 
     <form action="index.php?action=insertInvoice" method="post">
 
-    <label for="numero_documento">Numero Documento  Cliente</label>
-    <input type="text" name="numero_documento" required>
+    <label for="numero_documento">Numero Documento Cliente</label>
+    <select name="numero_documento" id="numero_documento">
+    <option value="">Identifiacion Cliente</option>
+    <?php foreach($users as $user): ?>
+        <option value="<?= $user['idUsua']; ?>"><?= $user['idUsua']; ?></option>
+    <?php endforeach; ?>
+    </select>
 
     <br>
+
     <label for="codigoProduc">Codigo del Producto</label>
-    <input type="text" name="codigoProduc" required>
-    
+    <select name="codigoProduc" id="codigoProduc">
+    <option value="">Identifiacion Producto</option>
+    <?php foreach($products as $product): ?>
+        <option value="<?= $product['codproducto']; ?>"><?= $product['codproducto']; ?></option>
+    <?php endforeach; ?>
+    </select>    
 
     <label for="fechaV">Fecha de Venta</label>
     <input type="date" name="fechaV" required>

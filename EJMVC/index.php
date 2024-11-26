@@ -122,12 +122,15 @@ switch($action){
         //Opcion factura
     case"insertInvoice":
 
+        $users = $userController->listUsers();
+        $products = $productController->listProducts();
+
         if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             $invoiceController->insertInvoice();
     
             }else{
-    
+        
                 include './views/insertInvoice.php';
             }
             break;
@@ -269,7 +272,6 @@ switch($action){
         include './views/listClassProductByName.php';
         break;
 
-    
 
     default:
         include './views/DashBoard.php';

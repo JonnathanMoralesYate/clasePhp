@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styleConsulta.css?v=1.0">
-    <title>Lista de Usuarios Presentar</title>
+    <title>Lista de Usuarios</title>
 </head>
 <body>
 <div class="container">
-    <h1>Lista de Usuarios Presentar</h1>
+    <h1>Lista de Usuarios</h1>
 
     <table border="1" class="styled-table">
         <thead>

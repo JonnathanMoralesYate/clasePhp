@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styleConsulta.css?v=1.0">
-    <title>Buscar Tipo de Documento por Nombre</title>
+    <title>Actualizar Tipo de Documento por Nombre</title>
 </head>
 <body>
 <div class="container">
-    <h1>Buscar Tipo de Documento por Nombre</h1>
+    <h1>Actualizar Tipo de Documento por Nombre</h1>
     <div class="navigation">
     <form action="index.php?action=searchTypeDocumentByNameU" method="get">
         <input type="hidden" name="action" value="searchTypeDocumentByNameU">

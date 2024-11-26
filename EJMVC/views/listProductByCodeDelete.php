@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Eliminar Producto por </h1>
+    <h1>Eliminar Producto por Codigo </h1>
     <div class="navigation">
     <form action="index.php?action=deleteProduct" method="get">
         <input type="hidden" name="action" value="deleteProduct">
